@@ -21,7 +21,7 @@ NGuyễn Tài Anh: Xây dựng các chức năng của trang Web và hoà
 <p style="font-weight:bold">Admin:</p>
 <ul>
 <li> Đăng nhập/Đăng xuất</li>
-<li> Đổi thông tin tài khoản</li>
+<li> Đổi thông tin tài khoản Admin</li>
 <li> Thêm, xóa, sửa truyện</li>
 <li> Thống kê tổng số truyện được up lên</li>
 </ul>
