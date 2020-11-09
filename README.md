@@ -15,6 +15,9 @@ NGuyễn Tài Anh: Xây dựng các chức năng của trang Web và hoà
 <li> Đổi thông tin tài khoản</li>
 <li> Thêm vào truyện yêu thích</li>
 <li> Đọc truyện mọi lúc mọi nơi chỉ cần có kết nối Internet</li>
+  <li>Phân loại truyện:phân loại theo thể loại, phân loại theo tác giả</li>
+  <li>Truyện mới cập nhật</li>
+  <li>Xem offline </li>
 <li> Bình Luận</li>
 </ul>
 <p style="font-weight:bold">Admin:</p>
