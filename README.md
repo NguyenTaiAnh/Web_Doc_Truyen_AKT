@@ -7,7 +7,7 @@ Trần Minh Tâm: Xây dựng mô hình hoạtđộng của Web, vẽ WireFr
 Nguyễn Văn Khải: Thiết kế giao diện cho Web và hỗ trợ một ít về chức năng trong trang Web.<br>
 NGuyễn Tài Anh: Xây dựng các chức năng của trang Web và hoàn thiện sản phẩm.<br>
 
-<p>Website "Đọc truyện AKT" là trang web tìm kiếm truyện. Người dùng khi vào trang web có thể login hoặc có thể không. Cả hai trường hợp đều có thể tìm kiếm truyện để đọc, dựa theo keyword mà họ nhập. Hệ thông sẽ tích hợp tất cả các chức năng chung quy về 1 ô search, chỉ cần bạn search với 1 keyword nào đó thì cũng sẽ có, không phân biệt là tên chap, trên truyện, tên tác giả, thể loại,... Nếu muốn thêm truyện vào danh mục yêu thích, bạn phải đăng ký và đăng nhập.</p>
+<p>Website "Đọc truyện AKT" là trang web tìm kiếm truyện. Người dùng khi vào trang web có thể login hoặc có thể không. Cả hai trường hợp đều có thể tìm kiếm truyện để đọc, dựa theo keyword mà họ nhập. Hệ thông sẽ tích hợp tất cả các chức năng chung quy về 1 ô search, chỉ cần bạn search với 1 keyword nào đó thì cũng sẽ có, không phân biệt là tên chap, trên truyện, tên tác giả, thể loại,... Nếu muốn thêm truyện vào danh mục yêu thích, bạn phải đăng ký và đăng nhập. Dữ liệu truyện dự kiến lưu ở database localhost</p>
 <p style="font-weight:bold">Website có các chức năng như sau:</p>
 <p style="font-weight:bold">User:</p><ul>
 <li> Đăng nhập/Đăng xuất</li>
