@@ -16,7 +16,6 @@ NGuyễn Tài Anh: Xây dựng các chức năng của trang Web và hoà
 <li> Thêm vào truyện yêu thích</li>
 <li> Đọc truyện mọi lúc mọi nơi chỉ cần có kết nối Internet</li>
 <li> Bình Luận</li>
-<li> Tìm kiếm </li>
 </ul>
 <p style="font-weight:bold">Admin:</p>
 <ul>
