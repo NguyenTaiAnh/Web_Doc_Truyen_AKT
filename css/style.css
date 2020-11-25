@@ -125,17 +125,17 @@ header{
     text-align: center;
 }
 .name_stories{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: gray;
 }
 .number{
     text-align: center;
-    border: 1px solid #5c8465;
+    
     border-radius: 24px;
     margin: auto;
     font-weight: bold;
-    background: #5c8465;
+    
     color: white;
     font-size: 18px;
 }
@@ -151,14 +151,24 @@ header{
     text-transform: uppercase;
 
 }
-a{
+.cls_hover{
+    color: gray;
+    
     transition: all 0.1s linear;
 }
-a:hover{
+.cls_hover:hover{
     text-decoration: none;
-    
+    color: gray;
     padding-left: 5px;
 }
+.new_story{
+    color: black;
+}
+.new_story:hover{
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width:480px){
     body{
       font-size: 12px;
