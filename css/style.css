@@ -69,7 +69,8 @@ header{
 }
 .text-header span{
 	position: absolute;
-	top: 0;
+    top: 0;
+    bottom: 0;
 	right: 0;
 	background: #1d1f20;
 	width: 100%;
