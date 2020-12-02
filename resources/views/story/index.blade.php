@@ -39,9 +39,11 @@
                                         <th scope="row">{{$stor->id}}</th>
                                         <th>{{$stor->name}}</th>
                                         <th>
-                                            @foreach($stor->category as $cate)
-                                            {{$cate->name}}
+                                            <ul>
+                                                @foreach($stor->Category as $category)
+                                                    <li>{{$category->name}}</li>
                                                 @endforeach
+                                            </ul>
                                         </th>
                                         <th>
                                             {{$stor['author']['name']}}

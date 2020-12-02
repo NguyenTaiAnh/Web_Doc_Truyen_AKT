@@ -15,6 +15,6 @@ class Category extends Model
         'name'
     ];
     public function story(){
-        return $this->belongsToMany(Story::class,'story_category');
+        return $this->belongsToMany(Story::class, 'story_category', 'category_id', 'story_id');//not available story_id
     }
 }

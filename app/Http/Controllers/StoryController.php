@@ -42,15 +42,14 @@ class StoryController extends Controller
      */
     public function store(Request $request)
     {
-//
-        $categorys = $request->input('category');
-        $categoryArray = array();
-        foreach ($categorys as $category){
-            $categoryArray[] = $category;
-        }
+
+//        dd($request->all());
+
         //
         $story = new Story();
         $story->name = $request['name'];
+
+        //handle Image
         if($request->hasFile('image')){
             $image = $request->file('image');
             $name = time().'.'.$image->getClientOriginalExtension();
@@ -60,12 +59,25 @@ class StoryController extends Controller
             $image->move($path,$name);
             $story->image =$name;
         }
+
 //        $story->category_id = implode($request['category']);
 //        $story['category_id'] = implode($request->input('category'));
-        $arayCategory = implode(',',$request->input('category'));
-        $story['category_id'] = $arayCategory;
+
+        //handle category
+        $categories = $request->input('category');
+//        $categoryArray = array();
+//        foreach ($categoriest as $category){
+//            $categoryArray[] = (int)$category;
+//        }
+////        dd($categoryArray);
+////        $arayCategory = implode(',',$request->input('category_id'));
+//        $arayCategory = implode(',', $request['category']);
+//        $story['category_id'] = $arayCategory;
+
         $story->author_id = $request['author_id'];
         $story->save();
+        $story->Category()->attach($categories);
+
         return redirect()->route('story.index');
 
     }

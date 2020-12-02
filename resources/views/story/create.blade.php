@@ -13,13 +13,7 @@
                                 @csrf
                                 <fieldset>
                                     <!-- Form Name -->
-                                    <legend>story <a class="btn btn-primary"
-                                                      style="margin-bottom: 10px; float: right"
-                                                      href="{{route('story.index')}}"
-                                                      role="button">
-                                            Back
-                                        </a></legend>
-
+                                    <legend>story <a class="btn btn-primary" style="margin-bottom: 10px; float: right"  href="{{route('story.index')}}" role="button"> Back </a></legend>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">story Name</label>
                                         <div class="col-md-4">
@@ -28,11 +22,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-4 control-label" >Category</label>
-
                                               <table>
                                                   <tr>
                                                       @foreach($category as $cate)
-
                                                       <th>
                                                     <input type="checkbox" name="category[]"
                                                            value="{{$cate->id}}"
@@ -42,8 +34,6 @@
                                                       </th>
                                                       @endforeach
                                                   </tr>
-
-
                                               </table>
                                     </div>
                                     <div class="form-group">
