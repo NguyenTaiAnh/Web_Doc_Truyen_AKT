@@ -62,7 +62,7 @@ class StoryController extends Controller
         }
 //        $story->category_id = implode($request['category']);
 //        $story['category_id'] = implode($request->input('category'));
-        $arayCategory = implode($request->input('category'));
+        $arayCategory = implode(',',$request->input('category'));
         $story['category_id'] = $arayCategory;
         $story->author_id = $request['author_id'];
         $story->save();

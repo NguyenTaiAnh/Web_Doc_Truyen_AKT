@@ -39,11 +39,11 @@
                                         <th scope="row">{{$stor->id}}</th>
                                         <th>{{$stor->name}}</th>
                                         <th>
-
-                                            {{$stor['category']['name']}}
+                                            @foreach($stor->category as $cate)
+                                            {{$cate->name}}
+                                                @endforeach
                                         </th>
                                         <th>
-
                                             {{$stor['author']['name']}}
                                         </th>
                                         <th style="width: 30%"><img src="/assets/images/{{$stor->image}}" style="width: 20%;"></th>
