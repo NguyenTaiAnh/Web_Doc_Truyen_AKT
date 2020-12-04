@@ -11,37 +11,29 @@
                         <div style="margin:0 50px">
                             <a class="btn btn-primary"
                                style="margin-bottom: 10px; float: right"
-                               href="{{route('category.index')}}"
+                               href="{{route('status.index')}}"
                                role="button">
                                 Back
                             </a>
 
-                            <form class="form-horizontal" action="{{route('category.update',$category->id)}}"method="post">
+                            <form class="form-horizontal" action="{{route('status.update',$status->id)}}"method="post">
                                 @csrf
                                 @method('put')
 
                                 <fieldset>
                                     <!-- Form Name -->
-                                    <legend>category</legend>
+                                    <legend>status</legend>
                                     <div class="form-group">
-                                        <label class="col-md-4 control-label">category Name</label>
+                                        <label class="col-md-4 control-label">status Name</label>
                                         <div class="col-md-4">
-                                            <input name="name" value="{{$category->name}}" class="form-control input-md" required="" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-4 control-label">Description</label>
-                                        <div class="col-md-4">
-                                            <textarea name="description" class="form-control input-md" required="" >
-                                                {{$category->description}}
-                                            </textarea>
+                                            <input name="name" placeholder="{{$status->name}}" class="form-control input-md" required="" type="text">
                                         </div>
                                     </div>
                                     <!-- Button -->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label"></label>
                                         <div class="col-md-4">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Update category</button>
+                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Update status</button>
                                         </div>
                                     </div>
 

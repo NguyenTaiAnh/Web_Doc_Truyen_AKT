@@ -26,6 +26,7 @@
                                     <th scope="col">Name</th>
                                     <th scope="col">Category</th>
                                     <th scope="col">Author</th>
+                                    <th scope="col">Description</th>
                                     <th scope="col">Image</th>
                                     <th scope="col">Options</th>
 
@@ -47,6 +48,9 @@
                                         </th>
                                         <th>
                                             {{$stor['author']['name']}}
+                                        </th>
+                                        <th>
+                                            {{$stor['status']['name']}}
                                         </th>
                                         <th style="width: 30%"><img src="/assets/images/{{$stor->image}}" style="width: 20%;"></th>
 

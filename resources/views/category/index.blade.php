@@ -25,6 +25,7 @@
 
                                     <th scope="col">ID</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Description</th>
                                     <th scope="col">Options</th>
 
                                 </tr>
@@ -36,6 +37,7 @@
                                     <tr>
                                         <th scope="row">{{$au->id}}</th>
                                         <th>{{$au->name}}</th>
+                                        <th>{{$au->description}}</th>
                                         <th>
                                             <form action="{{route('category.destroy',$au->id)}}" method="post" >
                                                 @csrf

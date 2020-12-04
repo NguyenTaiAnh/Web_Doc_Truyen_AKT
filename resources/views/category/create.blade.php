@@ -25,6 +25,13 @@
                                             <input name="name" placeholder="category NAME" class="form-control input-md" required="" type="text">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Description</label>
+                                        <div class="col-md-4">
+                                            <textarea name="description" class="form-control input-md" required="" >
+                                            </textarea>
+                                        </div>
+                                    </div>
                                     <!-- Button -->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label"></label>

@@ -25,6 +25,7 @@
 
                                     <th scope="col">ID</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Description</th>
                                     <th scope="col">Options</th>
 
                                 </tr>
@@ -41,6 +42,11 @@
                                     <th>
                                         <form action="{{route('category.show',$category->id)}}" >
                                             <p>{{$category->name}}</p>
+                                        </form>
+                                    </th>
+                                    <th>
+                                        <form action="{{route('category.show',$category->id)}}" >
+                                            <p>{{$category->description}}</p>
                                         </form>
                                     </th>
                                     <th>

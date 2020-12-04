@@ -27,7 +27,16 @@
                     <li><a href="{{route('category.create')}}">Create</a></li>
                 </ul>
             </li>
-
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <span>Status</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{{route('status.index')}}">List</a></li>
+                    <li><a href="{{route('status.create')}}">Create</a></li>
+                </ul>
+            </li>
             <li class="sub-menu">
                 <a href="javascript:;">
                     <i class="fa fa-pencil-square-o"></i>
@@ -40,16 +49,6 @@
             </li>
             <li class="sub-menu">
                 <a href="javascript:;">
-                    <i class="fa fa-file-text-o"></i>
-                    <span>Chapter</span>
-                </a>
-                <ul class="sub">
-                    <li><a href="{{route('chapter.index')}}">List</a></li>
-                    <li><a href="{{route('chapter.create')}}">Create</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;">
                     <i class="fa fa-book"></i>
                     <span>Story</span>
                 </a>
@@ -58,6 +57,17 @@
                     <li><a href="{{route('story.create')}}">Create</a></li>
                 </ul>
             </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>Chapter</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{{route('chapter.index')}}">List</a></li>
+                    <li><a href="{{route('chapter.create')}}">Create</a></li>
+                </ul>
+            </li>
+
             <li class="sub-menu">
                 <a href="/">
                     <i class="fa fa-star"></i>

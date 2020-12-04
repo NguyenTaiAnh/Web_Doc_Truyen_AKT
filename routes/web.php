@@ -18,6 +18,7 @@ Route::resource('category','CategoryController');
 Route::resource('author','AuthorController');
 Route::resource('story','StoryController');
 Route::resource('chapter','ChapterController');
+Route::resource('status','StatusController');
 Route::get('admin',function (){
     return view('dashboard');
 });

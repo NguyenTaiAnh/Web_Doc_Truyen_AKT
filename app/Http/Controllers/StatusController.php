@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Status;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $category = Category::all();
-        return view('category/index',compact('category'));
+        $status = Status::all();
+        return view('status.index',compact('status'));
     }
 
     /**
@@ -27,9 +27,8 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        $category = Category::select('id','name')->get();
-        return view('category/create',compact('category'));
 
+        return view('status.create');
     }
 
     /**
@@ -41,11 +40,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $category = new Category();
-        $category->name = $request['name'];
-        $category->description = $request['description'];
-        $category->save();
-        return redirect()->route('category.index')->with('successfully');
+        $status = new Status();
+        $status->name = $request['name'];
+        $status->save();
+        return redirect()->route('status.index');
     }
 
     /**
@@ -57,8 +55,8 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
-        $category = Category::find($id);
-        return view('category/detail',compact('category'));
+        $status = Status::find($id);
+        return view('status.detail',compact('status'));
     }
 
     /**
@@ -70,8 +68,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
-        $category = Category::find($id);
-        return view('category/edit',compact('category'));
+        $status = Status::find($id);
+        return view('status.update',compact('status'));
     }
 
     /**
@@ -81,14 +79,13 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Status $status)
     {
         //
-        $category->update([
-            'name'=>$request['name'],
-            'description' => $request['description']
+        $status->update([
+            'name' => $request['name']
         ]);
-        return redirect()->route('category.index')->with('success');
+        return redirect()->route('status.index');
     }
 
     /**
@@ -100,8 +97,8 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //
-        $category = Category::find($id);
-        $category->delete();
-        return redirect()->route('category.index');
+        $status = Status::find($id);
+        $status->delete();
+        return redirect()->route('status.index');
     }
 }

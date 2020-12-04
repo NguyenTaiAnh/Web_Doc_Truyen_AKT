@@ -17,8 +17,10 @@ class CreateStoryTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('image')->nullable();
-            $table->integer('category_id')->unsigned();
+            $table->string('category_id')->nullable();
             $table->integer('author_id')->unsigned();
+            $table->integer('status_id')->unsigned();
+            $table->text('description');
             $table->timestamps();
         });
     }

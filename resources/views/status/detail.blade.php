@@ -10,11 +10,11 @@
                     <div class="row mtbox" style="margin: 0px">
 
                         <div style="margin: 10px">
-                            <h2>Author</h2>
+                            <h2>Status</h2>
 
                             <a class="btn btn-primary"
                                style="margin-bottom: 10px; float: right"
-                               href="{{route('author.index')}}"
+                               href="{{route('status.index')}}"
                                role="button">
                                 Back
                             </a>
@@ -35,17 +35,17 @@
 
                                     <tr>
                                         <th scope="row">
-                                            <form action="{{route('author.show',$author->id)}}" >
-                                                <p>{{$author->id}}</p>
+                                            <form action="{{route('status.show',$status->id)}}" >
+                                                <p>{{$status->id}}</p>
                                             </form>
                                         </th>
                                         <th>
-                                            <form action="{{route('author.show',$author->id)}}" >
-                                                <p>{{$author->name}}</p>
+                                            <form action="{{route('status.show',$status->id)}}" >
+                                                <p>{{$status->name}}</p>
                                             </form>
                                         </th>
                                         <th>
-                                                <a type="button" class="btn btn-info" href="{{route('author.edit',$author->id)}}">Update</a>
+                                                <a type="button" class="btn btn-info" href="{{route('status.edit',$status->id)}}">Update</a>
 
                                         </th>
                                     </tr>

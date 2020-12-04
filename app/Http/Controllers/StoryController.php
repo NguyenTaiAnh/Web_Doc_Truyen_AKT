@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Author;
 use App\Category;
+use App\Status;
 use App\Story;
 use Illuminate\Http\Request;
 
@@ -31,7 +32,8 @@ class StoryController extends Controller
         //
         $category = Category::all();
         $author = Author::all();
-        return view('story.create',compact('category','author'));
+        $status = Status::all();
+        return view('story.create',compact('category','author','status'));
     }
 
     /**
@@ -43,9 +45,6 @@ class StoryController extends Controller
     public function store(Request $request)
     {
 
-//        dd($request->all());
-
-        //
         $story = new Story();
         $story->name = $request['name'];
 
@@ -60,21 +59,13 @@ class StoryController extends Controller
             $story->image =$name;
         }
 
-//        $story->category_id = implode($request['category']);
-//        $story['category_id'] = implode($request->input('category'));
-
         //handle category
         $categories = $request->input('category');
-//        $categoryArray = array();
-//        foreach ($categoriest as $category){
-//            $categoryArray[] = (int)$category;
-//        }
-////        dd($categoryArray);
-////        $arayCategory = implode(',',$request->input('category_id'));
-//        $arayCategory = implode(',', $request['category']);
-//        $story['category_id'] = $arayCategory;
 
+        $story->description = $request['description'];
         $story->author_id = $request['author_id'];
+        $story->status_id = $request['status_id'];
+
         $story->save();
         $story->Category()->attach($categories);
 
@@ -102,6 +93,11 @@ class StoryController extends Controller
     public function edit($id)
     {
         //
+        $story = Story::find($id);
+        $category = Category::all();
+        $author = Author::all();
+        $status = Status::all();
+        return view('story.update',compact('story','category','author','status'));
     }
 
     /**
@@ -111,9 +107,26 @@ class StoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Story $story)
     {
         //
+        $story->update([
+           'name' => $request['name'],
+           'author_id' => $request['author_id']
+        ]);
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $name = time().'.'.$image->getClientOriginalExtension();
+            // Thư mục upload
+            $path =public_path() . '/assets/images/';
+            // Bắt đầu chuyển file vào thư mục
+            $image->move($path,$name);
+            $story->image =$name;
+        }
+        $categories = $request->input('category');
+        $story->Category()->attach($categories);
+        $story->save();
+        return redirect()->route('story.index');
     }
 
     /**
