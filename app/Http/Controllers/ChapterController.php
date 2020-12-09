@@ -59,6 +59,8 @@ class ChapterController extends Controller
     public function show($id)
     {
         //
+        $chapter = Chapter::find($id);
+        return view('chapter.detail',compact('chapter'));
     }
 
     /**
@@ -70,7 +72,10 @@ class ChapterController extends Controller
     public function edit($id)
     {
         //
+        $chapter = Chapter::find($id);
+        $story = Story::all();
 
+        return view('chapter.update',compact('chapter','story'));
     }
 
     /**
@@ -80,9 +85,16 @@ class ChapterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Chapter $chapter)
     {
         //
+        $chapter->update([
+            'name' => $request['name'],
+            'chap' => $request['chap'],
+            'story_id' => $request['story_id'],
+            'content' => $request['content']
+        ]);
+        return redirect()->route('chapter.index');
     }
 
     /**
@@ -95,7 +107,7 @@ class ChapterController extends Controller
     {
         //
         $chap = Chapter::find($id);
-        $chap->save();
+        $chap->delete();
         return redirect()->route('chapter.index');
     }
 }

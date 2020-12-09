@@ -16,7 +16,7 @@ class CreateStoryTable extends Migration
         Schema::create('story', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->string('category_id')->nullable();
             $table->integer('author_id')->unsigned();
             $table->integer('status_id')->unsigned();
