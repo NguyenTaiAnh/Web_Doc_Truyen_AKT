@@ -1,0 +1,19 @@
+.truyen-main {
+    padding: 0;
+}
+.nh-thumb.nh-thumb--72 {
+    width: 100px;
+}
+.nh-thumb {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+.img_cate {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    display: block;
+    margin: auto;
+}
