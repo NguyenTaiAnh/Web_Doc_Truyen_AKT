@@ -183,3 +183,50 @@ header {
         font-size: 12px;
     }
 }
+.btn_gt {
+    display: flex;
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.btn_gt > li {
+    /* margin-right: 13px; */
+    display: inline-block;
+    width: 33%;
+    border-radius: 20px;
+    border: 1px solid #5eb949;
+    background: #5eb949;
+    text-align: center;
+    line-height: 2.5;
+    cursor: pointer;
+    margin: auto;
+}
+.btn_gt > li > a {
+    color: white;
+    font-weight: bold;
+}
+.btn_gt > li > a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.btn_story {
+    display: block;
+    width: 45%;
+    border-radius: 20px;
+    border: 1px solid#e74c3c;
+    background: #e74c3c;
+    text-align: center;
+    line-height: 2.5;
+    margin: auto;
+}
+.btn_story {
+    color: white;
+    font-weight: bold;
+}
+.btn_story:hover {
+    color: white;
+    font-weight: bold;
+
+    text-decoration: none;
+}
