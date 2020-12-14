@@ -204,6 +204,8 @@ header {
 .btn_gt > li > a {
     color: white;
     font-weight: bold;
+    display: inline-block;
+    width: 100%;
 }
 .btn_gt > li > a:hover {
     color: white;
@@ -229,4 +231,18 @@ header {
     font-weight: bold;
 
     text-decoration: none;
+}
+.dropdown-menu2 {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.dropdown-menu2.show {
+    opacity: 1;
+    visibility: visible;
 }
