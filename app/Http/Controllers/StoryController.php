@@ -83,6 +83,11 @@ class StoryController extends Controller
     public function show($id)
     {
         //
+        $story = Story::find($id);
+        $category = Story::all();
+        $status = Story::all();
+        $author = Author::all();
+        return view('story.detail',compact('story','category','status','author'));
     }
 
     /**
