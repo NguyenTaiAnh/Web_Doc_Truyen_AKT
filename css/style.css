@@ -322,3 +322,79 @@ span {
     opacity: 1;
     visibility: visible;
 }
+.title-name {
+    display: inline;
+    border-bottom: 1px solid;
+    font-size: 25px;
+}
+.detail {
+    display: block;
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+.detail li a {
+    color: black;
+}
+.detail :hover {
+    text-decoration: none;
+    color: #5eb949;
+}
+hr.chapter-start {
+    background: url("../img/1.png") -200px -27px no-repeat;
+    width: 59px;
+    height: 20px;
+}
+hr.chapter-start,
+hr.chapter-end {
+    border: 0;
+    margin: 10px auto;
+    display: table;
+}
+hr.chapter-end {
+    background: url(../img/spriteimg_new_white_op.png) 0 -51px no-repeat;
+    width: 277px;
+    height: 35px;
+}
+.chuong {
+    line-height: 2;
+}
+.chuong p {
+    font-size: 25px;
+}
+#myBtn:hover {
+    background-color: #555;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+.chapter-name {
+    font-size: 22px;
+}
+.chapter-name :hover {
+    text-decoration: none;
+    color: greenyellow;
+}
+.chapter-name a {
+    color: black;
+}
+.str-name :hover {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+.str-name a {
+    color: black;
+}
