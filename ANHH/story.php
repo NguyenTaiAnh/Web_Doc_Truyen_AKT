@@ -1,4 +1,14 @@
 <?php
+
+    session_start();
+
+    if(isset($_SESSION['role']) && isset($_SESSION['email'])){
+        $dangnhap = "<a class='nav-link' >".$_SESSION['email']."</a>";
+        $dangky = "<a class='nav-link' href='./process/logout.php'>Đăng Xuất</a>";
+    }else{
+        $dangnhap = "<a class='nav-link' href='login.php'>Đăng Nhập</a>";
+        $dangky = "<a class='nav-link' href='signup.php'>Đăng Ký</a>";
+    }
     $id_truyen = $_GET['id_truyen'];
 ?>
 
@@ -91,13 +101,15 @@
                     <ul class="navbar-nav ml-auto">
 
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Đăng Nhập</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="signup.html">Đăng Ký</a>
-                        </li>
-                    </ul>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="login.php">Đăng Nhập</a> -->
+              <?php echo $dangnhap; ?>
+            </li>
+            <li class="nav-item ">
+              <!-- <a class="nav-link" href="signup.php">Đăng Ký</a> -->
+              <?php echo $dangky; ?>
+            </li>
+          </ul>
                 </div>
 
             </nav>
@@ -362,7 +374,7 @@
 
                 
             
-                 temp2 += "<div class='col-md-6 col-sm-12 col-12'><ul class='detail'><li><a href='detail.php?chap="+u.chap+"&ten_chuong="+u.name_chap+"&id_truyen="+<?php echo $id_truyen;?>+"&tentruyen="+u.name+"&chap="+u.chap+"'>Chương "+u.chap+": "+u.name_chap+"</a></li></ul></div>"                 
+                 temp2 += "<div class='col-md-6 col-sm-12 col-12'><ul class='detail'><li><a href='detail.php?ten_chuong="+u.name_chap+"&id_truyen="+<?php echo $id_truyen;?>+"&tentruyen="+u.name+"&chap="+u.chap+"'>Chương "+u.chap+": "+u.name_chap+"</a></li></ul></div>"                 
 
                 })
             

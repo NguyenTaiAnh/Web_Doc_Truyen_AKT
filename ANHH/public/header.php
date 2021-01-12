@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(isset($_SESSION['role']) && isset($_SESSION['email'])){
+    $dangnhap = "<a class='nav-link' >".$_SESSION['email']."</a>";
+    $dangky = "<a class='nav-link' href='./process/logout.php'>Đăng Xuất</a>";
+}else{
+    $dangnhap = "<a class='nav-link' href='login.php'>Đăng Nhập</a>";
+    $dangky = "<a class='nav-link' href='signup.php'>Đăng Ký</a>";
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,10 +123,12 @@
 
 
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Đăng Nhập</a>
+              <!-- <a class="nav-link" href="login.php">Đăng Nhập</a> -->
+              <?php echo $dangnhap; ?>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="signup.html">Đăng Ký</a>
+              <!-- <a class="nav-link" href="signup.php">Đăng Ký</a> -->
+              <?php echo $dangky; ?>
             </li>
           </ul>
         </div>

@@ -1,5 +1,6 @@
 <?php
 include './public/header.php'
+
 ?>
 
 <div class="banner">
