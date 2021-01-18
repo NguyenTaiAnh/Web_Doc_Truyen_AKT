@@ -51,9 +51,9 @@
                                         </th>
                                     </tr>
                                 @endforeach
-
                                 </tbody>
                             </table>
+                            {!! $category->links() !!}
 
                         </div>
 

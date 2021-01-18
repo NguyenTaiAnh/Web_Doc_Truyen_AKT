@@ -7,7 +7,7 @@ use App\Category;
 use App\Status;
 use App\Story;
 use Illuminate\Http\Request;
-
+//use DataTab
 class StoryController extends Controller
 {
     /**
@@ -54,23 +54,23 @@ class StoryController extends Controller
         }
 
         //handle category
-//         $categories = $request->input('category');
+        //         $categories = $request->input('category');
         $story->category_id = json_encode($request->category, true);
         $story->description = $request['description'];
         $story->author_id = $request['author_id'];
         $story->status_id = $request['status_id'];
         $story->save();
-//         $story->Category()->attach($categories);
+        //         $story->Category()->attach($categories);
 
-//        $saveTmp = Story::create([
-//            'name' => $request->name,
-//            'image' => $request->image,
-//            'category_id' => json_encode($request->category, true),
-//            'author_id' => $request->author_id,
-//            'status_id' => $request->status_id,
-//            'description' => $request->description,
-//            'image' => ''
-//        ]);
+        //        $saveTmp = Story::create([
+        //            'name' => $request->name,
+        //            'image' => $request->image,
+        //            'category_id' => json_encode($request->category, true),
+        //            'author_id' => $request->author_id,
+        //            'status_id' => $request->status_id,
+        //            'description' => $request->description,
+        //            'image' => ''
+        //        ]);
         return redirect()->route('story.index');
     }
 
@@ -87,7 +87,7 @@ class StoryController extends Controller
         $category = Story::all();
         $status = Story::all();
         $author = Author::all();
-        return view('story.detail',compact('story','category','status','author'));
+        return view('story.detail', compact('story', 'category', 'status', 'author'));
     }
 
     /**
