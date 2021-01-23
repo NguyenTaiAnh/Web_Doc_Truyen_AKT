@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKT-Truyện</title>
+    <base href="{{asset('')}}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./client/css/style.css">
     <link rel="stylesheet" href="./client/css/login.css">
+    <link rel="stylesheet" href="./client/css/category.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -44,21 +47,11 @@
                         <div class="dropdown-menu" style="width: 600px;" aria-labelledby="navbarDropdown">
                             <div class="container">
                                 <div class="row">
+                                    @foreach($category as $cate)
                                     <div class="col-md-4">
-                                        <a class="dropdown-item" href="/theloai">Action</a>
-                                        <a class="dropdown-item" href="category.html">Another action</a>
-                                        <a class="dropdown-item" href="category.html">Something else here</a>
+                                        <a class="dropdown-item" href="{{route('theloai',$cate->id)}}">{{$cate->name}}</a>
                                     </div>
-                                    <div class="col-md-4">
-                                        <a class="dropdown-item" href="category.html">Action</a>
-                                        <a class="dropdown-item" href="category.html">Another action</a>
-                                        <a class="dropdown-item" href="category.html">Something else here</a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a class="dropdown-item" href="category.html">Action</a>
-                                        <a class="dropdown-item" href="category.html">Another action</a>
-                                        <a class="dropdown-item" href="category.html">Something else here</a>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -69,10 +62,10 @@
                             Danh mục
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/danhmuc">Truyện Đã Hoàn Thành</a>
-                            <a class="dropdown-item" href="danhmuc.html">Truyện Mới</a>
-                            <a class="dropdown-item" href="danhmuc.html">Truyện Mới Cập Nhật</a>
+                            @foreach($status as $sta)
+                            <a class="dropdown-item" href="{{route('danhmuc',$sta->id)}}">{{$sta->name}}</a>
 
+                            @endforeach
                         </div>
                     </li>
 
@@ -141,15 +134,9 @@
         </nav>
     </div>
 </header>
-    @yield('chitiet')
-    @yield('taikhoan')
-    @yield('tacgia')
-    @yield('danhmuc')
-    @yield('theloai')
-    @yield('truyen')
-    @yield('dangnhap')
-    @yield('dangky')
-    @yield('home')
+    @yield('content')
+
+
 <div class="container-fluid" style="padding: 0;line-height: 30px;">
     <div class="footer">
         <div class="container">
@@ -215,6 +202,8 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
+@yield('custom_js')
+
 </body>
 
 </html>

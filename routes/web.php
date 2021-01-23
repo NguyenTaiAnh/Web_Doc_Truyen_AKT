@@ -26,21 +26,15 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function()
     Route::resource('status','StatusController');
 
 });
-Route::get('/',function () {
-    return view('TrangChu');
-});
+Route::get('/','ClientController@index');
 
-Route::get('/dangky','ClientController@getDangKy');
-Route::post('/dangky','ClientController@postDangKy');
-Route::get('/dangnhap','ClientController@getDangNhap');
-Route::post('/dangnhap','ClientController@postDangNhap');
-Route::get('/truyen','ClientController@getTruyen');
-Route::get('/theloai','ClientController@getTheLoai');
+Route::get('/truyen/{id}','ClientController@getTruyen')->name('truyen');
+Route::get('/theloai/{id}','ClientController@getTheLoai')->name('theloai');
 Route::get('/chitiet','ClientController@getChiTiet');
-Route::get('/danhmuc','ClientController@getDanhMuc');
+Route::get('/danhmuc/{id}','ClientController@getDanhMuc')->name('danhmuc');
 Route::get('/taikhoan','ClientController@getTaiKhoan');
-Route::get('/tacgia','ClientController@getTacGia');
+Route::get('/tacgia/{id}','ClientController@getTacGia')->name('tacgia');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

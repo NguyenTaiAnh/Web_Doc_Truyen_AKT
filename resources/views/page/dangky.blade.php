@@ -1,5 +1,5 @@
 @extends('master')
-@section('dangky')
+@section('content')
 <div class="container-fluid bkg">
     <div class="container ">
         <div class="row">

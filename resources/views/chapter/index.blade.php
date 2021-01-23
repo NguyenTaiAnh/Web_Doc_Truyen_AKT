@@ -42,7 +42,12 @@
                                         <th>
                                             {{$chap['story']['name']}}
                                         </th>
-                                        <th>{{$chap['content']}}</th>
+                                        <th style="word-break: break-all" class="showhide">
+                                            <p class="text-less">{{$chap->content}}</p>
+                                            <p class="text-more d-none">{{$chap->content}}</p>
+
+                                        </th>
+{{--                                        <th>{{$chap['content']}}</th>--}}
                                         <th>
                                             <form action="{{route('chapter.destroy',$chap->id)}}" method="post" >
                                                 @csrf
@@ -70,4 +75,41 @@
     </section>
 
 @endsection
+@section('custom_js')
+    <script !src="">
+        const thDescription = document.querySelectorAll('.showhide');
 
+
+
+        thDescription.forEach((item, index) => {
+            const textLess = item.querySelector('.text-less');
+            const textMore = item.querySelector('.text-more');
+            const btnMore = document.createElement('span');
+
+            btnMore.setAttribute('class', 'btn btn-primary')
+            btnMore.innerHTML  = "Show"
+            btnMore.style.cursor = 'pointer'
+
+            if(textLess.textContent.length > 50){
+                textLess.innerHTML = textLess.textContent.substr(0, 50) + '...'
+                item.appendChild(btnMore)
+            }
+            btnMore.onclick = function () {
+                textMore.classList.toggle('d-none')
+                textLess.classList.toggle('d-none')
+
+                if(textLess.getAttribute('class').includes('d-none')){
+                    btnMore.innerHTML  = "Hide"
+                    btnMore.classList.add('btn-danger')
+                } else {
+                    btnMore.innerHTML  = "Show"
+                    btnMore.classList.remove('btn-danger')
+
+                }
+            }
+        })
+
+
+
+    </script>
+@endsection

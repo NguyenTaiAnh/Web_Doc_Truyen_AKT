@@ -1,5 +1,5 @@
 @extends('master')
-@section('dangnhap')
+@section('content')
 <div class="container-fluid bkg">
 
     <div class="container">

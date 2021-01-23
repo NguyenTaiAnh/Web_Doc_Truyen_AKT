@@ -1,23 +1,32 @@
 @extends('master')
-@section('truyen')
+@section('content')
 <div class="container" style="margin-top: 20px;">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-xs-8 col-sm-12 truyen-main">
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-12 col-12" style="padding: 0; margin-bottom: 20px;">
-                    <img src="./client/img/img_truyen.jpg" width="100%" alt="">
+                    <img src=" /assets/images/{{$chapter->story->image}}" width="100%" alt="">
                 </div>
                 <div class="col-md-8 col-lg-8 col-sm-12 col-12">
                     <div style="display: block; margin: auto;">
                         <div style="line-height: 2;">
-                            <h3 style="text-transform: uppercase; font-weight: bold;">trọng sinh đô thị tu tiên</h3>
-                            <p class="str-name">Tác giả: <a href="/tacgia"
-                                                            style="text-transform: capitalize;">Tên tác giả</a>
+                            <h3 style="text-transform: uppercase; font-weight: bold;">{{$chapter->story->name}}</h3>
+                            <p class="str-name">Tác giả: <a href="{{route('tacgia',$chapter->story->author->id)}}"
+                                                            style="text-transform: capitalize;">{{$chapter->story->author->name}}</a>
                             </p>
-                            <p class="str-name">Thể loại: <a href="/theloai"
-                                                             style="text-transform: capitalize;">Tên thể
-                                    loại</a></p>
-                            <p>Trạng thái: <span style="text-transform: capitalize;">Trạng thái</span></p>
+                            <p class="str-name">Thể loại:
+
+                                @foreach(getCategory($chapter->story->category_id) as $key=> $name)
+
+                                <a href="{{route('theloai',$name->id)}}"
+                                                             style="text-transform: capitalize;">
+                                {{ $name['name'] }}
+                                </a>
+
+{{--                                <li>{{ $name['name'] }}</li> <br>--}}
+                            @endforeach
+                            </p>
+                            <p>Trạng thái: <span style="text-transform: capitalize;">{{$chapter->story->status->name}}</span></p>
                             <p>Độ dài: <span>999</span></p>
 
                         </div>

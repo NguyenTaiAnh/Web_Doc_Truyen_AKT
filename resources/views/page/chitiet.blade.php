@@ -1,5 +1,5 @@
 @extends('master')
-@section('chitiet')
+@section('content')
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div class="container" style="margin-top: 20px;">
         <div class="row">

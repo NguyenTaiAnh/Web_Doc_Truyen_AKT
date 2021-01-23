@@ -1,418 +1,45 @@
-@extends('admin')
-@section('tacgia')
+@extends('master')
+@section('content')
     <div class="container" style="margin-top: 20px;">
         <div class="row">
             <div class="col-md-8 col-lg-8 col-xs-8 col-sm-12 truyen-main">
-                <h2 style="border-bottom:1px solid ;">Tên Tác Giả</h2>
+                <h2 style="border-bottom:1px solid ;">{{$author->name}}</h2>
                 <!-- --------------------------content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a href="story.html" class="new_story"><i class="fa fa-book"
-                                                                                               aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a href="story.html" class="new_story"><i class="fa fa-book"
-                                                                                               aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <div class="truyen">
-                    <div class="row" style="margin: 0;">
-                        <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
-                            <img src=" img/img_truyen.jpg" class="img_cate" alt="">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-9 content">
-                            <p class="name_stories"> <a class="new_story"><i class="fa fa-book" aria-hidden="true"></i>
-                                    Tên Truyện</a></p>
-                            <p> <a class="new_story"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tên Tác
-                                    Giả</a></p>
-                            <p class="content">Giới thiệu truyện Truyện phương trượng của tác giả Hắc Thổ Mạo Thanh
-                                Yên là một tác phầm
-                                hay mang nhiều tình tiết hấp dẫn lôi cuốn bạn đọc. Truyện phương trượng xoay quanh
-                                nhân
-                                vật chính là Xuyên Thành. Ông trời không có mắt, không ngờ rằng đưa một thanh niên
-                                8X
-                                đang bừng bừng sức sống như</p>
-                            <p>Chương mới nhất: <a href="detail.html" class="new_story">Chương xxx: Tên chương</a></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- -------------------------- end-content---------------------------- -->
-                <nav aria-label="...">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                @foreach($story as $stor)
+                    @foreach($chapter as $chap)
+                        @if($chap->story->category_id == $stor->category_id)
+                            <div class="truyen">
+                                <div class="row" style="margin: 0;">
+                                    <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
+                                        <img src=" /assets/images/{{$chap->story->image}}" class="img_cate" alt="">
+                                    </div>
+                                    <div class="col-md-9 col-sm-9 col-9 content">
+                                        <p class="name_stories"><a href="{{route('truyen',$chap->story->id)}}"
+                                                                   class="new_story"><i class="fa fa-book"
+                                                                                        aria-hidden="true"></i>
+                                                {{$chap->story->name}}</a></p>
+
+                                        <p><a class="new_story"><i class="fa fa-pencil-square-o"
+                                                                   aria-hidden="true"></i> {{$chap->story->author->name}}
+                                            </a></p>
+                                        <div style="word-break: break-all" class="showhide">
+                                            <p class=" content text-less ">{{$chap->story->description}}</p>
+                                            <p class=" content text-more d-none">{{$chap->story->description}}</p>
+                                        </div>
+                                        {{--                                                                    <p class="content">{{$stor->description}}</p>--}}
+                                        <p>Chương: <a href="detail.html" class="new_story">{{$chap->chap}}
+                                                : {{$chap->name}}</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        @endif
+                    @endforeach
+                @endforeach
+            <!-- -------------------------- end-content---------------------------- -->
+
+                {!! $story->links() !!}
+
             </div>
             <!-- -------------------- end---------------- -->
             <div class="col-md-4 col-lg-4 col-xs-4 col-sm-12">
@@ -422,24 +49,11 @@
                     </div>
                     <!-- =====================================BEGIN CATEGORY============================= -->
                     <div class="row" style="margin: auto;">
-                        <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                            <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        </div>
+                        @foreach($category as $cate)
+                            <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
+                                <p><a href="{{route('theloai',$cate->id)}}" class="cls_hover">{{$cate->name}}</a></p>
+                            </div>
+                        @endforeach
                     </div>
                     <!-- ======================================END CATEGORY================================ -->
                 </div>
@@ -576,4 +190,40 @@
             </div>
         </div>
     </div>
+@endsection
+@section('custom_js')
+    <script !src="">
+        const thDescription = document.querySelectorAll('.showhide');
+
+
+        thDescription.forEach((item, index) => {
+            const textLess = item.querySelector('.text-less');
+            const textMore = item.querySelector('.text-more');
+            const btnMore = document.createElement('span');
+
+            btnMore.setAttribute('class', 'btn btn-primary')
+            btnMore.innerHTML = "Show"
+            btnMore.style.cursor = 'pointer'
+
+            if (textLess.textContent.length > 50) {
+                textLess.innerHTML = textLess.textContent.substr(0, 50) + '...'
+                item.appendChild(btnMore)
+            }
+            btnMore.onclick = function () {
+                textMore.classList.toggle('d-none')
+                textLess.classList.toggle('d-none')
+
+                if (textLess.getAttribute('class').includes('d-none')) {
+                    btnMore.innerHTML = "Hide"
+                    btnMore.classList.add('btn-danger')
+                } else {
+                    btnMore.innerHTML = "Show"
+                    btnMore.classList.remove('btn-danger')
+
+                }
+            }
+        })
+
+
+    </script>
 @endsection

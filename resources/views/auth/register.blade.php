@@ -2,7 +2,6 @@
 
 @section('dangky')
     <div class="container-fluid bkg" style="padding: 100px 0 ">
-
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
