@@ -62,8 +62,9 @@
                     </div>
                     <div class="container" style="padding: 0px;">
                         <!----------------------------------- Begin all storeis -------------------------- -->
-                        @foreach($chapter as $index => $chap)
-<!--                            --><?php //dd($chapter); ?>
+{{--                        @foreach($story as $stor)--}}
+                        @foreach($chapter as  $chap)
+{{--                            @if($stor == $chap->story)--}}
                         <div class="row" style="padding: 0 ;margin: 5px 0px;">
                             <div class="col-sm-3 col-3 col-md-3 col-lg-3" style=" padding: 0px;">
                                 <div class="nh-thumb nh-thumb--72  mr-3">
@@ -71,30 +72,33 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-6 col-6" style="margin: auto;">
+
                                 <div>
-                                    <p class="name_stories"><a href="story.html" class="new_story"><i class="fa fa-book"
+                                    <p class="name_stories"><a href="{{route('truyen',$chap->story->id)}}" class="new_story"><i class="fa fa-book"
                                                 aria-hidden="true"></i>
                                             {{$chap['story']['name']}}</a></p>
                                     <p><a href="author.html" class="new_story"><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>
                                             {{$chap['story']['author']['name']}}</a></p>
                                 </div>
+
                             </div>
                             <div class="col-md-3 col-lg-3 col-3 col-sm-3" style="margin: auto;">
                                 <div>
-                                    <p class="chapter"><a href="detail.html" class="new_story">Chương {{$chap->chap}}</a></p>
+                                    <p class="chapter"><a href="{{route('chitiet',$chap->id)}}" class="new_story">Chương {{$chap->chap}}</a></p>
                                 </div>
                             </div>
                         </div>
                         <hr style="margin: 0px;">
                         @endforeach
+{{--                        @endforeach--}}
                         <!-- =================end========================== -->
 
 
 
 
 
-                    {!! $chapter->links() !!}
+{{--                    {!! $chapter->links() !!}--}}
 
                     <!------------------------------------ end all stories ------------------------------->
                     </div>

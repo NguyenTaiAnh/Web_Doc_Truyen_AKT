@@ -27,7 +27,7 @@
                             @endforeach
                             </p>
                             <p>Trạng thái: <span style="text-transform: capitalize;">{{$chapter->story->status->name}}</span></p>
-                            <p>Độ dài: <span>999</span></p>
+                            <p>Độ dài: <span>{{$count}}</span></p>
 
                         </div>
                         <div style=" margin-bottom: 10px;">
@@ -35,128 +35,41 @@
 
                             <ul class="btn_gt">
                                 <li class="">
-                                    <a class="" href="#gioithieu">Giới Thiệu</a>
+                                    <a class="" href="{{route('truyen',$chapter->story->id)}}#gioithieu">Giới Thiệu</a>
                                 </li>
                                 <li style="border: 1px solid #5cabb8;
                                     background: #5cabb8;">
-                                    <a href="#danhsach">Danh Sách Chương</a>
+                                    <a href="{{route('truyen',$chapter->story->id)}}/#danhsach">Danh Sách Chương</a>
                                 </li>
                             </ul>
-                            <a href="/chitiet" class="btn_story">Đọc Truyện</a>
+                            <a href="/chitiet/{{$chapter->id}}" class="btn_story">Đọc Truyện</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="gioithieu">
                 <h5 class="title-name">Giới thiệu truyện <span
-                        style="text-transform: capitalize; font-weight: bold; ">asdasd
-                            asdasd </span></h5>
+                        style="text-transform: capitalize; font-weight: bold; ">{{$chapter->story->name}} </span></h5>
                 <hr style="margin-top: 0;">
 
-                <p style="line-height: 2;">Hai con người hai tính cách hoàn toàn trái ngược nhau.
-
-                    Nữ chính là Hồ Kiều tính tình bưu hãn lại mạnh mẽ,
-
-                    Còn nam chính là Hứa Thanh Gia tính cách lại văn nhã.
-
-                    Cuộc sống sau khi cưới của họ là như vậy:
-
-                    Hồ Kiều: ”Tướng công chàng nói cái gì?”
-
-                    Hứa Thanh Gia: ”… Nàng thân là phụ nhân, phải tuân thủ nghiêm ngặt phụ đức…”
-
-                    Hồ Kiều: ”Tướng công ta nghễnh ngãng, chàng tới gần đây mà nói…” Chậm rãi giơ đao trong tay lên…
-
-                    Hứa Thanh Gia… Hứa Thanh Gia nặn ra một nụ cười cho qua, “Nương tử… Nương tử nói có lý!”
-
-                    Nguyên bản là thuần phụ ký, cuối cùng lại biến thành thuần phu ký.
-
-                    Hồ Kiều: ”…” Ta cái gì cũng chưa làm!
-
-                    Hứa Thanh Gia: “… Nương tử nói có lý!” Nội tâm lại yên lặng rơi lệ: Người nào có thể cho ta
-                    biết, có ai làm đại quan mà vẫn sợ vợ không? Đây không phải là sự thật đâu!</p>
+                <p style="line-height: 2;">{{$chapter->story->description}}</p>
             </div>
             <div id="danhsach">
                 <h5 class="title-name">Danh sách chương</h5>
                 <hr style="margin-top: 0;">
                 <div class="container">
                     <div class="row">
+                        @foreach($allChapter as $chap)
+
                         <div class="col-md-6 col-sm-12 col-12">
                             <ul class="detail">
+                                <li>
+                                    <a href="{{route('chitiet',$chap->id)}}">Chương {{$chap->chap}}: {{$chap->name}} </a>
+                                </li>
 
-                                <li>
-                                    <a href="/chitiet">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
                             </ul>
                         </div>
-                        <div class="col-md-6 col-sm-12 col-12">
-                            <ul class="detail">
-
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                                <li>
-                                    <a href="detail.html">Chương 1: Tên chương </a>
-                                </li>
-                            </ul>
-                        </div>
+                            @endforeach
                     </div>
                 </div>
             </div>
@@ -170,24 +83,11 @@
                 </div>
                 <!-- =====================================BEGIN CATEGORY============================= -->
                 <div class="row" style="margin: auto;">
-                    <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                        <p><a href="category.html" class="cls_hover">Tên thể loại</a></p>
-                    </div>
+                    @foreach($category as $cate)
+                        <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
+                            <p><a href="{{route('theloai',$cate->id)}}" class="cls_hover">{{$cate->name}}</a></p>
+                        </div>
+                    @endforeach
                 </div>
                 <!-- ======================================END CATEGORY================================ -->
             </div>

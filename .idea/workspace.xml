@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c1273032-bf57-4b65-afb0-6977c233c81e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/TrangChu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/TrangChu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chapter/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chapter/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/chitiet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/chitiet.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/dangky.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/dangky.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/dangnhap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/dangnhap.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/danhmuc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/danhmuc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/tacgia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/tacgia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/theloai.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/theloai.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/truyen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/truyen.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/story/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/story/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,25 +21,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            <state relative-caret-position="188">
+              <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
               <folding>
                 <element signature="e#40#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/page/truyen.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="48" />
-              <folding>
-                <element signature="e#1332#1367#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/page/tacgia.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="13" column="89" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="89" />
+            <state relative-caret-position="346">
+              <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
               <folding>
                 <element signature="e#0#13108#0#Blade" />
               </folding>
@@ -69,26 +46,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/page/danhmuc.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/page/chitiet.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="13" column="89" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="89" />
-              <folding>
-                <element signature="e#36720#37110#0#HTML" />
-                <element signature="e#37207#37454#0#HTML" />
-                <element signature="e#0#15031#0#Blade" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="18" column="88" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="88" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/story/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/page/truyen.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="47" column="45" selection-start-line="42" selection-start-column="40" selection-end-line="47" selection-end-column="45" />
+            <state relative-caret-position="20">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
-                <element signature="e#1964#1985#0#HTML" expanded="true" />
+                <element signature="e#6341#6396#0#HTML" expanded="true" />
+                <element signature="e#7065#7119#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="30" column="72" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="72" />
+            <state relative-caret-position="240">
+              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -128,6 +101,7 @@
       <find>$chap</find>
       <find>admin</find>
       <find>id</find>
+      <find>strict</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -149,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/chapter/update.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/chapter/detail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChapterController.php" />
         <option value="$PROJECT_DIR$/app/StroryCategory.php" />
@@ -185,21 +158,22 @@
         <option value="$PROJECT_DIR$/resources/views/header.blad.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
-        <option value="$PROJECT_DIR$/resources/views/TrangChu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/tacgia.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/dangnhap.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/dangky.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/page/chitiet.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/theloai.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
         <option value="$PROJECT_DIR$/resources/views/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/danhmuc.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/TrangChu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/page/truyen.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
+        <option value="$PROJECT_DIR$/resources/views/page/chitiet.blade.php" />
       </list>
     </option>
   </component>
@@ -500,12 +474,12 @@
       <workItem from="1611299686441" duration="12768000" />
       <workItem from="1611316648122" duration="8643000" />
       <workItem from="1611328767073" duration="7523000" />
-      <workItem from="1611373707199" duration="17015000" />
+      <workItem from="1611373707199" duration="33140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243118000" />
+    <option name="totallyTimeSpent" value="259243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,7 +509,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.14009662" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17874396" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -555,7 +529,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/page/truyen.blade.php</url>
-          <line>325</line>
+          <line>225</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -563,17 +537,15 @@
           <line>39</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/page/truyen.blade.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -797,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/page/chitiet.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/page/dangky.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -865,44 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/TrangChu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/page/theloai.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/page/tacgia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="13" column="89" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#13108#0#Blade" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,12 +866,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/TrangChu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+          <folding>
+            <element signature="e#2076#2095#0#HTML" expanded="true" />
+            <element signature="e#2174#2212#0#HTML" expanded="true" />
+            <element signature="e#3164#3200#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/page/tacgia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#13108#0#Blade" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/page/truyen.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="48" />
+        <state relative-caret-position="20">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
-            <element signature="e#1332#1367#0#HTML" expanded="true" />
+            <element signature="e#6341#6396#0#HTML" expanded="true" />
+            <element signature="e#7065#7119#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/page/chitiet.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="88" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

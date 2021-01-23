@@ -30,7 +30,7 @@ Route::get('/','ClientController@index');
 
 Route::get('/truyen/{id}','ClientController@getTruyen')->name('truyen');
 Route::get('/theloai/{id}','ClientController@getTheLoai')->name('theloai');
-Route::get('/chitiet','ClientController@getChiTiet');
+Route::get('/chitiet/{id}','ClientController@getChiTiet')->name('chitiet');
 Route::get('/danhmuc/{id}','ClientController@getDanhMuc')->name('danhmuc');
 Route::get('/taikhoan','ClientController@getTaiKhoan');
 Route::get('/tacgia/{id}','ClientController@getTacGia')->name('tacgia');
