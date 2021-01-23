@@ -1,41 +1,86 @@
-# Web_Doc_Truyen_AKT
+# Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
 
-<h3>Nhóm trưởng: Nguyễn Tài Anh + thành Viên( Nguyễn Văn Khải + Trần Minh Tâm)</h3>
-Công việc các thành viên
+[![Platform](https://img.shields.io/badge/platform-PHP-blue
+)](https://www.php.net/downloads.php)
+[![Laguage](https://img.shields.io/badge/WEB-HTML-green
+)](https://www.php.net/downloads.php)
+[![Language](https://img.shields.io/badge/Style-CSS-red
+)](https://developer.mozilla.org/vi/docs/Web/CSS)
+[![Language](https://img.shields.io/badge/WEB-javascripts-9cf
+)](https://www.php.net/downloads.php)
+[![DB](https://img.shields.io/badge/DB-MYSQL-information
+)](https://www.mysql.com/)
 
-Trần Minh Tâm: Xây dựng mô hình hoạtđộng của Web, vẽ WireFrame và wordflow cho các bạn trong nhóm, phân tích hệ thống và xây dựng csdl.<br>
-Nguyễn Văn Khải: Thiết kế giao diện cho Web và hỗ trợ một ít về chức năng trong trang Web.<br>
-NGuyễn Tài Anh: Xây dựng các chức năng của trang Web và hoàn thiện sản phẩm.<br>
 
-<p>Website "Đọc truyện AKT" là trang web tìm kiếm truyện. Người dùng khi vào trang web có thể login hoặc có thể không. Cả hai trường hợp đều có thể tìm kiếm truyện để đọc, dựa theo keyword mà họ nhập. Hệ thông sẽ tích hợp tất cả các chức năng chung quy về 1 ô search, chỉ cần bạn search với 1 keyword nào đó thì cũng sẽ có, không phân biệt là tên chap, trên truyện, tên tác giả, thể loại,... Nếu muốn thêm truyện vào danh mục yêu thích, bạn phải đăng ký và đăng nhập. Dữ liệu truyện dự kiến lưu ở database localhost</p>
-<p style="font-weight:bold">Website có các chức năng như sau:</p>
-<p style="font-weight:bold">User:</p><ul>
-<li> Đăng nhập/Đăng xuất</li>
-<li> Login with google</li>  
-<li> Đổi thông tin tài khoản</li>
-<li> Thêm vào truyện yêu thích</li>
-<li> Đọc truyện mọi lúc mọi nơi chỉ cần có kết nối Internet</li>
-  <li>Phân loại truyện:phân loại theo thể loại, phân loại theo tác giả</li>
-  <li>Truyện mới cập nhật</li>
-  <li>Xem offline </li>
-<li> Bình Luận</li>
-</ul>
-<p style="font-weight:bold">Admin:</p>
+♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬
+<h2> ✈ Công dụng, ứng dụng  </h2>
+<h3> Công dụng </h3>
+
+ - Tìm kiếm bài hát theo tên, ca sĩ
+ - Tải nhạc miễn phí
+ - Nghe nhạc trực tuyến
+ - Gửi thông tin đến email người dùng
+ 
+ <h3> Ứng dụng </h3>
+ 
+ - Áp dụng cho các nhóm nhỏ, tổ chức phi lợi nhuận trong việc chia sẻ âm nhạc miễn phí.
+ - Những người yêu thích sự tiện lợi , nhanh chóng trong việc nghe và tải nhạc 
+ 
+<h2>☝ Mục đích của bài toán</h2>
+
+<h3> Đầu vào</h3>
+
+- Tên bài hát, tên ca sĩ, tên album
+- Link Address
+- Youtube link Address
+- Email, tài khoản, mật khẩu người dùng 
+
+<h3> Đầu ra </h3>
+
+- Danh sách bài hát
+- Bản nghe thử 
+- Link download 
+- Share tới mạng xã hội 
+
+<h2>⚙ Các bước cài đặt</h2>
+
+- Bước 1: Clone Responsity này về
+- Bước 2: Nếu dùng Xampp, Copy folder vừa clone về cho vào thư mục htdocs của Xampp.
+- Bước 3: Mở thư mục xampp, tìm file xampp-control.exe, run Apache và MySql, đảm bảo hiển thị như hình dưới đây
+
+[![vAylx4.png](https://b.imge.to/2019/12/12/vAylx4.png)](https://imge.to/i/vAylx4)
+
+- Bước 4: Vào trình duyệt mở localhost/[tên thư mục folder bên trong htdocs]
+
+- Bước 5: Enter -> Taa.daa
+
+<h2>📑 Nội dung của bài toán </h2>
+
+- Chức năng đã làm được:
+<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Download</p>
+
+[![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
+
+<p>- Thao tác</p>
 <ul>
-<li> Đăng nhập/Đăng xuất</li>
-<li> Đổi thông tin tài khoản Admin</li>
-<li> Thêm, xóa, sửa truyện</li>
-<li> Thống kê tổng số truyện được up lên</li>
-  <li>Khóa tài khoản user</li>
+    <li> Nhập tên bài hát hiển thị kết quả </li>
+    <li> Nhập tên ca sĩ hiển thị kết quả </li>
+    <li> Nhấn nút download tải nhạc về máy</li>
 </ul>
 
-<p style="font-weight:bold">Công nghệ sử dụng</p>
-<ul>
-<li> laravel framework</li>
-<li> html/css/javascript</li>
-<li> Bootstrap</li>
-<li> mariaDB</li>
-</ul>
+[![vAyYAf.png](https://c.imge.to/2019/12/12/vAyYAf.png)](https://imge.to/i/vAyYAf)
 
+<h2>💻 Hướng phát triển cho bài toán</h2>
 
+- Hiển thị phân loại nhạc, thể loại, dòng nhạc, top 10 ...
+- Dán link-address, địa chỉ album nhạc để tìm ra danh sách bài hát tự động
+- Dán vào link-youtube, tự động convert Youtube thành MP3 và hiển thị link download.
+- Phát triển thành một Chrome Extension tích hợp hỗ trợ người dùng tải nhanh ở các địa chỉ khác nhau.   
 
+<h2>👦 Tác giả: </h3>
+     
+- **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) -  [link to GitHub!](https://github.com/futureskyprojects)
+- **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - [link to GitHub!](https://github.com/mchoang98)
+   
+   
+   
