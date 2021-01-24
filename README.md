@@ -34,7 +34,8 @@
 <h3> Đầu ra </h3>
 
 - Danh sách truyện
-- Bản theo dõi
+- Danh sách chương của 1 truyện
+- Danh sách truyện thgeo dõi
 
 <h2>⚙ Các bước cài đặt</h2>
 
@@ -51,30 +52,31 @@
 <h2>📑 Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
-<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập</p>
+<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Trang đọc truyện</p>
 
 [![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
 
 <p>- Thao tác</p>
 <ul>
-    <li> Nhập tên bài hát hiển thị kết quả </li>
-    <li> Nhập tên ca sĩ hiển thị kết quả </li>
-    <li> Nhấn nút download tải nhạc về máy</li>
+    <li> Nhập tên truyện </li>
+    <li> Chọn truyện muốn xem </li>
+    <li> Đọc truyện bắt đầu từ chương bạn muốn</li>
+    <li> Đặt truyện vào danh sách yêu thích ( k bắt buộc) </li>
 </ul>
 
 [![vAyYAf.png](https://c.imge.to/2019/12/12/vAyYAf.png)](https://imge.to/i/vAyYAf)
 
 <h2>💻 Hướng phát triển cho bài toán</h2>
 
-- Hiển thị phân loại nhạc, thể loại, dòng nhạc, top 10 ...
-- Dán link-address, địa chỉ album nhạc để tìm ra danh sách bài hát tự động
-- Dán vào link-youtube, tự động convert Youtube thành MP3 và hiển thị link download.
-- Phát triển thành một Chrome Extension tích hợp hỗ trợ người dùng tải nhanh ở các địa chỉ khác nhau.   
+- Ưu tiên các truyện có nhiều lượt xem lên top ...
+- Chia sẽ truyện lên các trang mạng xã hội
+- Mục comment cho người đọc truyện
+ 
 
 <h2>👦 Tác giả: </h3>
      
-- **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) -  [link to GitHub!](https://github.com/futureskyprojects)
-- **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - [link to GitHub!](https://github.com/mchoang98)
+- **Nguyễn Tài Anh** - Back End Developer (PHP, MySQL) -  [link to GitHub!](https://github.com/futureskyprojects)
+- **Nguyễn Văn Khải** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - [link to GitHub!](https://github.com/mchoang98)
    
    
    
