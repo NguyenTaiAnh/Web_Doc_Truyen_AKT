@@ -50,10 +50,12 @@
 - Bước 9: Mở file .env.example sao chép toàn vộ vào file .env
 - Bước 10: Tạo một database trên MySQL Xampp 
 - Bước 10: Import file demotruyen.sql (trong thư mục vừa clonde về) vào database vừa tạo
-- Bước 10: Chú ý thay đổi các dòng sau sao cho phù hợp với máy
 - Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
 - Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+
+<b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy<b>
+
 <ul style="list-style-type:circle">
     <li>DB_CONNECTION=mysql</li>
         <li>    DB_HOST=127.0.0.1</li>
@@ -65,9 +67,10 @@
 
 <br>
 -------------------- END -------------------------------
-TK test:
-- Tk ADMIN: anh@gmail.com / 12345678
-- Tk USER:  anh1@gmail.com / 12345678
+<br>
+TK test:<br>
+- Tk ADMIN: anh@gmail.com / 12345678<br>
+- Tk USER:  anh1@gmail.com / 12345678<br>
 <h2>📑 Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
