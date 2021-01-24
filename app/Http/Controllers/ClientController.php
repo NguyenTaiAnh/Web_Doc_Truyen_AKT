@@ -17,26 +17,9 @@ class ClientController extends Controller
 
     public function index()
     {
-        $story = Story::all();
         $category = Category::all();
-//        $name = Story::select('name')->get();
         $story = Story::get();
-//        $chapter = Chapter::latest()->paginate(5);
-        $truyen = Chapter::get();
-
-//        foreach ($truyen as $chap){
-////                dd($chap->index);
-//            $data = $chap->story_id;
-//        }
-//        dd($data);
-
-        $chapter = Chapter::
-            groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
-//        $chapter = DB::select(DB::raw('SELECT id , MAX(chap), name, story_id, content, created_at , updated_at
-//FROM chapter
-//GROUP BY story_id'));
-//        dd($chapter);
-//        $chapter = DB::table('chapter')->where('story_id',$data)->orderBy('created_at', 'desc')->groupBy('story_id')->get();
+        $chapter = Chapter::groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
         $status = Status::get();
 
         return view('TrangChu', compact('category', 'chapter', 'story', 'status'));
@@ -70,7 +53,7 @@ class ClientController extends Controller
         $category = Category::all();
         $author = Author::where('id', $id)->first();
         $story = Story::where('author_id', $id)->paginate(10);
-        $chapter = Chapter::all();
+        $chapter = Chapter::groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
         $status = Status::get();
         return view('page.tacgia', compact('category', 'author', 'story', 'chapter', 'status'));
     }
@@ -80,15 +63,10 @@ class ClientController extends Controller
         $category = Category::all();
 
         $status = Status::get();
-        $chapter = Chapter::where('id',$id)->first();
-        $story = Story::all();
-        foreach ($story as $chap){
-            $data = $chap->id;
-        }
-        $totalChapter = Chapter::where('story_id',$data)->get();
-//        dd($totalChapter);
+        $chapter = Chapter::where('id', $id)->first();
+        $totalChapter = Chapter::all();
+        return view('page.chitiet', compact('category', 'status', 'chapter', 'totalChapter'));
 
-        return view('page.chitiet',compact('category','status','chapter','totalChapter'));
     }
 
     public function getDanhMuc($id)

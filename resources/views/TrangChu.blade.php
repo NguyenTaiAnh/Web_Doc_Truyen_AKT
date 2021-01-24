@@ -77,7 +77,7 @@
                                     <p class="name_stories"><a href="{{route('truyen',$chap->story->id)}}" class="new_story"><i class="fa fa-book"
                                                 aria-hidden="true"></i>
                                             {{$chap['story']['name']}}</a></p>
-                                    <p><a href="author.html" class="new_story"><i class="fa fa-pencil-square-o"
+                                    <p><a href="{{route('tacgia',$chap->story->author->id)}}" class="new_story"><i class="fa fa-pencil-square-o"
                                                 aria-hidden="true"></i>
                                             {{$chap['story']['author']['name']}}</a></p>
                                 </div>

@@ -11,14 +11,18 @@
                     <hr class="chapter-start">
                     <div>
                         <a href="#" class="btn btn-success btn-chapter-nav disabled">Chương Trước</a>
-                        <select class="btn btn-success btn-chapter-nav form-control">
-                            @foreach($totalChapter as  $total)
-                            <option value="{{$total->id}}">Chương {{$total->chap}}: {{$total->name}}</option>
+                        <select class="btn btn-success btn-chapter-nav form-control" name="chapter">
+                            @foreach($totalChapter as   $total)
+                                @if($total->story->id === $chapter->story->id)
+                            <option value="{{$total->id}}"
+                                {{$total->chap === $chapter->chap ? "selected" : ""}}
+                            >Chương {{$total->chap}}: {{$total->name}}</option>
+                                @endif
                             @endforeach
                         </select>
-                        <a href="#" class="btn btn-success btn-chapter-nav ">Chương Tiếp</a>
-
+                        <a href="" class="btn btn-success btn-chapter-nav ">Chương Tiếp</a>
                     </div>
+{{--                        {!! $totalChapter->links() !!}--}}
                     <hr class="chapter-start">
                 </div>
                 <div class="chuong">
@@ -32,8 +36,12 @@
                     <div>
                         <a href="#" class="btn btn-success btn-chapter-nav disabled">Chương Trước</a>
                         <select class="btn btn-success btn-chapter-nav form-control">
-                            @foreach($totalChapter as  $total)
-                                <option value="{{$total->id}}">Chương {{$total->chap}}: {{$total->name}}</option>
+                            @foreach($totalChapter as   $total)
+                                @if($total->story->id === $chapter->story->id)
+                                    <option value="{{$total->id}}"
+                                        {{$total->chap === $chapter->chap ? "selected" : ""}}
+                                    >Chương {{$total->chap}}: {{$total->name}}</option>
+                                @endif
                             @endforeach
                         </select>
                         <a href="#" class="btn btn-success btn-chapter-nav ">Chương Tiếp</a>

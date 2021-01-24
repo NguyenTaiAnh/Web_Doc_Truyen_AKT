@@ -12,23 +12,23 @@
                         <div class="col-md-3 col-sm-3 col-md-offset-1 box0">
                             <div class="box1">
                                 <span class="li_news"></span>
-                                <h3>933</h3>
+                                <h3>{{$story}}</h3>
                             </div>
-                            <p>993 Truyện</p>
+                            <p>{{$story}} Truyện</p>
                         </div>
                         <div class="col-md-3 col-sm-3 box0">
                             <div class="box1">
                                 <span class="li_user"></span>
-                                <h3>+48</h3>
+                                <h3>{{$user}}</h3>
                             </div>
-                            <p>48 Người dùng.</p>
+                            <p>{{$user}} Người dùng.</p>
                         </div>
                         <div class="col-md-3 col-sm-3 box0">
                             <div class="box1">
                                 <span class="li_note"></span>
-                                <h3>23</h3>
+                                <h3>{{$chap}}</h3>
                             </div>
-                            <p>Tổng 45 chương .</p>
+                            <p>Tổng {{$chap}} chương .</p>
                         </div>
 
 

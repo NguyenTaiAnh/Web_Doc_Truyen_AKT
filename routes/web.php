@@ -15,7 +15,11 @@
 //    return view('welcome');
 //});
 Route::get('admin',function (){
-    return view('dashboard');
+    $story = \App\Story::all()->count();
+    $chap = \App\Chapter::all()->count();
+    $user = Auth::user()->count();
+
+    return view('dashboard',compact('story','chap','user'));
 })->middleware('admin');
 Route::group(['prefix'=>'admin','middleware'=>'admin'],function()
 {
