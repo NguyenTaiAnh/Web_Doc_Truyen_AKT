@@ -76,7 +76,7 @@ TK test:<br>
 - Chức năng đã làm được:
 <p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Trang đọc truyện</p>
 
-[![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
+[![vqyDqU.png](https://github.com/NguyenTaiAnh/Web_Doc_Truyen_AKT/blob/BEadmin/public/img/img.jpg?raw=true)](https://imge.to/i/vqyDqU)
 
 <p>- Thao tác</p>
 <ul>
