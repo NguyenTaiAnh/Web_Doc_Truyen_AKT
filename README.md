@@ -1,4 +1,4 @@
-# Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
+# Truyện ATK - ỨNG DỤNG WEB ĐỌC TRUYỆN MIỄN PHÍ 
 
 [![Platform](https://img.shields.io/badge/platform-PHP-blue
 )](https://www.php.net/downloads.php)
@@ -16,31 +16,25 @@
 <h2> ✈ Công dụng, ứng dụng  </h2>
 <h3> Công dụng </h3>
 
- - Tìm kiếm bài hát theo tên, ca sĩ
- - Tải nhạc miễn phí
- - Nghe nhạc trực tuyến
- - Gửi thông tin đến email người dùng
- 
+ - Tìm kiếm truyện theo tên theo tên, tác giả, thể loại
+ - Đăng ký tài khoản để thêm truyên yêu thích 
+  
  <h3> Ứng dụng </h3>
  
- - Áp dụng cho các nhóm nhỏ, tổ chức phi lợi nhuận trong việc chia sẻ âm nhạc miễn phí.
- - Những người yêu thích sự tiện lợi , nhanh chóng trong việc nghe và tải nhạc 
+ - Áp dụng cho các nhóm nhỏ, tổ chức trong việc chia sẻ tác phẩm truyện chữ miễn phí.
+ - Những người yêu thích đọc truyện.
  
 <h2>☝ Mục đích của bài toán</h2>
 
 <h3> Đầu vào</h3>
 
-- Tên bài hát, tên ca sĩ, tên album
-- Link Address
-- Youtube link Address
+- Tên truyện, tên tác giả, tên thể loại
 - Email, tài khoản, mật khẩu người dùng 
 
 <h3> Đầu ra </h3>
 
-- Danh sách bài hát
-- Bản nghe thử 
-- Link download 
-- Share tới mạng xã hội 
+- Danh sách truyện
+- Bản theo dõi
 
 <h2>⚙ Các bước cài đặt</h2>
 
@@ -57,7 +51,7 @@
 <h2>📑 Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
-<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Download</p>
+<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập</p>
 
 [![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
 
