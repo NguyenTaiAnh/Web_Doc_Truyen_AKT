@@ -99,7 +99,7 @@ TK test:<br>
 <h2>👦 Tác giả: </h3>
      
 - **Nguyễn Tài Anh**  - Back End Developer (Laravel, Git Manager) -  [link to GitHub!](https://github.com/NguyenTaiAnh)
-- **Trần Minh Tâm**   - Data Analysis (PHP, MySQL) -  [link to GitHub!](https://github.com/zdankz)
+- **Trần Minh Tâm**   - Data Analysis (PHP, MySQL, MariaDB) -  [link to GitHub!](https://github.com/zdankz)
 - **Nguyễn Văn Khải** - Front End Developper (HTML, CSS, Javascripts, Bootstrap) - [link to GitHub!](https://github.com/Nguyenkhai99vn)
    
    
