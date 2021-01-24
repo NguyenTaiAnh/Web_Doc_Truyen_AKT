@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\DB;
 class ClientController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $category = Category::all();
         $story = Story::get();
@@ -80,8 +80,8 @@ class ClientController extends Controller
         return view('page.danhmuc', compact('category', 'status', 'detail', 'story', 'chapter'));
     }
 
-    public function getTaiKhoan()
+    public function getTheoDoi()
     {
-        return view('page.taikhoan');
+        return view('page.theodoi');
     }
 }

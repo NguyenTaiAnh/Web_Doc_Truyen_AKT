@@ -36,7 +36,7 @@ Route::get('/truyen/{id}','ClientController@getTruyen')->name('truyen');
 Route::get('/theloai/{id}','ClientController@getTheLoai')->name('theloai');
 Route::get('/chitiet/{id}','ClientController@getChiTiet')->name('chitiet');
 Route::get('/danhmuc/{id}','ClientController@getDanhMuc')->name('danhmuc');
-Route::get('/taikhoan','ClientController@getTaiKhoan');
+Route::get('/theodoi/{id}','ClientController@getTheoDoi')->name('theodoi');
 Route::get('/tacgia/{id}','ClientController@getTacGia')->name('tacgia');
 
 Auth::routes();
