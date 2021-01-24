@@ -94,7 +94,7 @@ TK test:<br>
 </ul>
 
 <p>- Giao diện Admin</p>
-[![vAyYAf.png](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/142708273_883817519123395_7343830169040817429_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=pVMdZVe1LIsAX9RsMhQ&_nc_ht=scontent.fsgn2-6.fna&oh=e9cc3547e12b47946caa8b829abc5aec&oe=6031C661)](https://imge.to/i/vAyYAf)
+[![vAyYAf.png](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/142708273_883817519123395_7343830169040817429_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=pVMdZVe1LIsAX9RsMhQ&_nc_ht=scontent.fsgn2-6.fna&oh=e9cc3547e12b47946caa8b829abc5aec&oe=6031C661)](https://imge.to/i/vqyDqU)
 
 <h2>💻 Hướng phát triển cho bài toán</h2>
 
