@@ -54,7 +54,7 @@
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
 - Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
 
-<b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy<b>
+<b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy</b>
 
 <ul style="list-style-type:circle">
     <li>DB_CONNECTION=mysql</li>
