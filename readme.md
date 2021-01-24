@@ -59,8 +59,11 @@
             DB_PASSWORD=          // Nhập mật khẩu nếu có
 - Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
-- Bước 13: Nhấn Enter 
-
+- Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+-------------------- END -------------------------------
+TK test:
+- Tk ADMIN: anh@gmail.com / 12345678
+- Tk USER:  anh1@gmail.com / 12345678
 <h2>📑 Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
