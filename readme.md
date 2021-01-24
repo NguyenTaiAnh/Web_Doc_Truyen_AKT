@@ -53,6 +53,7 @@
 - Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
 - Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+[![vAyYAf.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
 <b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy</b>
 
@@ -75,10 +76,7 @@ TK test:<br>
 
 - Chức năng đã làm được:
 <p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Trang đọc truyện</p>
-
-[![vqyDqU.png](https://github.com/NguyenTaiAnh/Web_Doc_Truyen_AKT/blob/BEadmin/public/img/img.jpg?raw=true)](https://imge.to/i/vqyDqU)
-
-<p>- Thao tác</p>
+<p>- User</p>
 <ul>
     <li> Nhập tên truyện </li>
     <li> Chọn truyện muốn xem </li>
@@ -88,12 +86,22 @@ TK test:<br>
 
 [![vAyYAf.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
+
+<p>- Admin</p>
+<ul>
+    <li> Thống kê truyện, chương, người dùnhg </li>
+    <li> Quản lý người dùng, thể loại, trạng thái, tác giả, truyện, chương </li>
+</ul>
+
+<p>- Giao diện Admin</p>
+[![vAyYAf.png](https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.15752-9/142454150_235476731395933_2972909408269552325_n.png?_nc_cat=107&ccb=2&_nc_sid=ae9488&_nc_ohc=DbSoO6-Vf7gAX9px7WV&_nc_ht=scontent.fsgn2-1.fna&oh=4687e2a575073e461146283e319cc341&oe=603512F3)](https://imge.to/i/vAyYAf)
+
 <h2>💻 Hướng phát triển cho bài toán</h2>
 
 - Ưu tiên các truyện có nhiều lượt xem lên top ...
 - Chia sẽ truyện lên các trang mạng xã hội
 - Mục comment cho người đọc truyện
-- Người dùng có thể upload tru
+- Người dùng có thể upload truyện
  
 
 <h2>👦 Tác giả: </h3>
