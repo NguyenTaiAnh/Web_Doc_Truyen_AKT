@@ -86,7 +86,7 @@ TK test:<br>
     <li> Đặt truyện vào danh sách yêu thích (không bắt buộc) </li>
 </ul>
 
-[![vAyYAf.png](https://c.imge.to/2019/12/12/vAyYAf.png)](https://imge.to/i/vAyYAf)
+[![vAyYAf.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
 <h2>💻 Hướng phát triển cho bài toán</h2>
 
