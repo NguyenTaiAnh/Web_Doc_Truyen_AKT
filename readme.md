@@ -83,7 +83,7 @@ TK test:<br>
     <li> Nhập tên truyện </li>
     <li> Chọn truyện muốn xem </li>
     <li> Đọc truyện bắt đầu từ chương bạn muốn</li>
-    <li> Đặt truyện vào danh sách yêu thích ( k bắt buộc) </li>
+    <li> Đặt truyện vào danh sách yêu thích (không bắt buộc) </li>
 </ul>
 
 [![vAyYAf.png](https://c.imge.to/2019/12/12/vAyYAf.png)](https://imge.to/i/vAyYAf)
