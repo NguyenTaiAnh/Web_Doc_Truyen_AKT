@@ -51,15 +51,18 @@
 - Bước 10: Tạo một database trên MySQL Xampp 
 - Bước 10: Import file demotruyen.sql (trong thư mục vừa clonde về) vào database vừa tạo
 - Bước 10: Chú ý thay đổi các dòng sau sao cho phù hợp với máy
-            DB_CONNECTION=mysql
-            DB_HOST=127.0.0.1
-            DB_PORT=3306
-            DB_DATABASE=demotruyen // Tên database
-            DB_USERNAME=root       // nhập tên user nếu có 
-            DB_PASSWORD=          // Nhập mật khẩu nếu có
+<ul>
+    <li>DB_CONNECTION=mysql</li>
+        <li>    DB_HOST=127.0.0.1</li>
+            <li>DB_PORT=3306</li>
+            <li>DB_DATABASE=demotruyen // Tên database</li>
+            <li>DB_USERNAME=root       // nhập tên user nếu có</li> 
+            <li>DB_PASSWORD=          // Nhập mật khẩu nếu có</li>
+                </ul>
 - Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
 - Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+<br>
 -------------------- END -------------------------------
 TK test:
 - Tk ADMIN: anh@gmail.com / 12345678
