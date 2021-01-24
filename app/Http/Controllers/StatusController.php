@@ -15,7 +15,7 @@ class StatusController extends Controller
     public function index()
     {
         //
-        $status = Status::all();
+        $status = Status::paginate(5);
         return view('status.index',compact('status'));
     }
 

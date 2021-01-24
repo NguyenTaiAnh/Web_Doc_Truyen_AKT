@@ -66,10 +66,19 @@
                     <li><a href="{{route('chapter.index')}}">List</a></li>
                     <li><a href="{{route('chapter.create')}}">Create</a></li>
                 </ul>
+            </li><li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <span>Users</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="{{route('users.index')}}">List</a></li>
+                    <li><a href="{{route('users.create')}}">Create</a></li>
+                </ul>
             </li>
 
             <li class="sub-menu">
-                <a href="/">
+                <a href="{{route('about')}}">
                     <i class="fa fa-star"></i>
                     <span>About</span>
                 </a>

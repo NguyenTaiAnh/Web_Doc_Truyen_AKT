@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Chapter;
-use App\Story;
+use App\User;
 use Illuminate\Http\Request;
 
-class ChapterController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class ChapterController extends Controller
     public function index()
     {
         //
-        $chapter = Chapter::paginate(5);
-        return view('chapter.index',compact('chapter'));
+        $users = User::where('role',0)->paginate(5);
+        return view('users.index',compact('users'));
     }
 
     /**
@@ -28,8 +27,7 @@ class ChapterController extends Controller
     public function create()
     {
         //
-        $story = Story::all();
-        return view('chapter.create',compact('story'));
+        return view('users.create');
     }
 
     /**
@@ -41,13 +39,13 @@ class ChapterController extends Controller
     public function store(Request $request)
     {
         //
-        $chap = new Chapter();
-        $chap->chap = $request['chap'];
-        $chap->name = $request['name'];
-        $chap->story_id = $request['story'];
-        $chap->content = $request['content'];
-        $chap->save();
-        return redirect()->route('chapter.index');
+        $user = new User();
+        $user->name = $request['name'];
+        $user->email= $request['email'];
+        $user->password =bcrypt($request->password);
+        $user->role = "";
+        $user->save();
+        return redirect()->route('users.index')->with('thongbao','Bạn Đã Tạo Thành Công');
     }
 
     /**
@@ -59,8 +57,6 @@ class ChapterController extends Controller
     public function show($id)
     {
         //
-        $chapter = Chapter::find($id);
-        return view('chapter.detail',compact('chapter'));
     }
 
     /**
@@ -72,10 +68,8 @@ class ChapterController extends Controller
     public function edit($id)
     {
         //
-        $chapter = Chapter::find($id);
-        $story = Story::all();
-
-        return view('chapter.update',compact('chapter','story'));
+        $users = User::find($id);
+        return view('users.update',compact('users'));
     }
 
     /**
@@ -85,16 +79,15 @@ class ChapterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chapter $chapter)
+    public function update(Request $request, User $users)
     {
         //
-        $chapter->update([
+        $users->update([
             'name' => $request['name'],
-            'chap' => $request['chap'],
-            'story_id' => $request['story_id'],
-            'content' => $request['content']
+            'email' => $request['email'],
+            'password'=>bcrypt($request['password'])
         ]);
-        return redirect()->route('chapter.index');
+        return redirect()->route('users.index');
     }
 
     /**
@@ -106,8 +99,8 @@ class ChapterController extends Controller
     public function destroy($id)
     {
         //
-        $chap = Chapter::find($id);
-        $chap->delete();
-        return redirect()->route('chapter.index');
+        $users = User::find($id);
+        $users->delete();
+        return redirect()->route('users.index');
     }
 }

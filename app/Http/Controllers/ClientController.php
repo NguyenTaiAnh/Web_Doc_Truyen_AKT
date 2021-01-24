@@ -15,14 +15,30 @@ use Illuminate\Support\Facades\DB;
 class ClientController extends Controller
 {
 
-    public function index(Request $request)
+    public function search(Request $request)
+    {
+        $tukhoa = $request->get('tukhoa');
+//        $story = Story::where('name', 'like', "%$tukhoa%")
+//            ->take(30)->paginate(5)->appends(['tukhoa' => $tukhoa]);
+        $story = Story::whereHas('author', function($query) use($tukhoa) {
+            $query->where('name', 'like', '%'.$tukhoa.'%');
+        })->orWhere('name','LIKE','%'.$tukhoa.'%')->take(30)->paginate(5)->appends(['tukhoa' => $tukhoa]);
+
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
+        $category = Category::all();
+        $status = Status::all();
+        return view('page.timkiem', compact('tukhoa','story','chapter','category','status'));
+    }
+
+    public function index()
     {
         $category = Category::all();
-        $story = Story::get();
-        $chapter = Chapter::groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
+//        $story = Story::get();
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
+
         $status = Status::get();
 
-        return view('TrangChu', compact('category', 'chapter', 'story', 'status'));
+        return view('TrangChu', compact('category', 'chapter', 'status'));
     }
 
     public function getTruyen($id)
@@ -44,7 +60,7 @@ class ClientController extends Controller
         $story = Story::where('category_id', 'like', '%' . $id . '%')->paginate(10);
         $status = Status::get();
 
-        $chapter = Chapter::all();
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
         return view('page.theloai', compact('category', 'category_id', 'story', 'chapter', 'status'));
     }
 
@@ -53,7 +69,8 @@ class ClientController extends Controller
         $category = Category::all();
         $author = Author::where('id', $id)->first();
         $story = Story::where('author_id', $id)->paginate(10);
-        $chapter = Chapter::groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
+
         $status = Status::get();
         return view('page.tacgia', compact('category', 'author', 'story', 'chapter', 'status'));
     }
@@ -61,7 +78,6 @@ class ClientController extends Controller
     public function getChiTiet($id)
     {
         $category = Category::all();
-
         $status = Status::get();
         $chapter = Chapter::where('id', $id)->first();
         $totalChapter = Chapter::all();
@@ -75,7 +91,9 @@ class ClientController extends Controller
         $status = Status::get();
         $detail = Status::where('id', $id)->first();
         $story = Story::where('status_id', $id)->get();
-        $chapter = Chapter:: groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
+
+//        $chapter = Chapter:: groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
 
         return view('page.danhmuc', compact('category', 'status', 'detail', 'story', 'chapter'));
     }

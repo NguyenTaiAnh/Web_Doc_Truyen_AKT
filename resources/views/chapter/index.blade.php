@@ -33,10 +33,10 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($chapter as $chap)
+                                @foreach($chapter as $i => $chap)
 
                                     <tr>
-                                        <th scope="row">{{$chap->id}}</th>
+                                        <th scope="row">{{$i+1}}</th>
                                         <th>{{$chap->chap}}</th>
                                         <th>{{$chap->name}}</th>
                                         <th>
@@ -64,6 +64,7 @@
 
                                 </tbody>
                             </table>
+                            {!! $chapter->links() !!}
 
                         </div>
 

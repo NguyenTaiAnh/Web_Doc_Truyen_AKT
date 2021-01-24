@@ -40,7 +40,8 @@
                       </a>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             Thể Loại
                         </a>
@@ -48,22 +49,24 @@
                             <div class="container">
                                 <div class="row">
                                     @foreach($category as $cate)
-                                    <div class="col-md-4">
-                                        <a class="dropdown-item" href="{{route('theloai',$cate->id)}}">{{$cate->name}}</a>
-                                    </div>
+                                        <div class="col-md-4">
+                                            <a class="dropdown-item"
+                                               href="{{route('theloai',$cate->id)}}">{{$cate->name}}</a>
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             Danh mục
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach($status as $sta)
-                            <a class="dropdown-item" href="{{route('danhmuc',$sta->id)}}">{{$sta->name}}</a>
+                                <a class="dropdown-item" href="{{route('danhmuc',$sta->id)}}">{{$sta->name}}</a>
 
                             @endforeach
                         </div>
@@ -71,70 +74,78 @@
 
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-5" type="search" placeholder="Tên truyện hoặc tên tác giả"
-                           aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" action="timkiem" method="GET" role="search">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                    <input type="text" id="keyword" name="tukhoa"
+                           value="{{ isset($_GET['tukhoa']) ? $_GET['tukhoa'] : '' }}" class="form-control" autofocus
+                           placeholder="Tên truyện hoặc tên tác giả" aria-label="Recipient's username"
+                           aria-describedby="basic-addon2">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
 
                 <ul class="navbar-nav ml-auto">
                     @if (Route::has('login'))
-                            @auth
+                        @auth
                             @if(Auth::user()->role == 1)
                                 <li class="nav-item">
                                     <a href="/admin" class="nav-link">Admin panel</a>
                                 </li>
                             @endif
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">
-                                        {{ Auth::user()->name }}
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Tủ truyện</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
+                                        {{ __('Logout') }}
+                                    </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
 
-                            @else
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">Đăng Nhập</a>
-                                </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Đăng Nhập</a>
+                            </li>
 
-                                @if (Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{ route('register') }}">Đăng Ký</a>
                                 </li>
-                                @endif
-                            @endauth
+                            @endif
+                        @endauth
                     @endif
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="/admin" class="nav-link">Admin panel</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="account.html" class="nav-link">Tên User</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="/dangnhap">Đăng Nhập</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item ">--}}
-{{--                        <a class="nav-link" href="/dangky">Đăng Ký</a>--}}
-{{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a href="/admin" class="nav-link">Admin panel</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a href="account.html" class="nav-link">Tên User</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" href="/dangnhap">Đăng Nhập</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item ">--}}
+                    {{--                        <a class="nav-link" href="/dangky">Đăng Ký</a>--}}
+                    {{--                    </li>--}}
                 </ul>
             </div>
 
         </nav>
     </div>
 </header>
-    @yield('content')
+@yield('content')
 
 
 <div class="container-fluid" style="padding: 0;line-height: 30px;">
@@ -144,9 +155,11 @@
                 <div class="col-md-4 col-lg-4 col-sm-12 col-12 ">
                     <p class="ft_title">Giới thiệu</p>
                     <p>
-                        AKT-Truyện - Đọc truyện online, đọc truyện chữ, truyện hay. Website luôn cập nhật những bộ truyện mới
+                        AKT-Truyện - Đọc truyện online, đọc truyện chữ, truyện hay. Website luôn cập nhật những bộ
+                        truyện mới
                         thuộc
-                        các thể loại đặc sắc như truyện tiên hiệp, truyện kiếm hiệp, hay truyện ngôn tình một cách nhanh nhất. Hỗ
+                        các thể loại đặc sắc như truyện tiên hiệp, truyện kiếm hiệp, hay truyện ngôn tình một cách nhanh
+                        nhất. Hỗ
                         trợ
                         mọi thiết bị như di động và máy tính bảng.
                     </p>
@@ -186,7 +199,9 @@
     var mybutton = document.getElementById("myBtn");
 
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

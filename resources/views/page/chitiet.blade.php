@@ -10,7 +10,7 @@
                     <p class="chapter-name"><a >Chương {{$chapter->chap}} : {{$chapter->name}}</a></p>
                     <hr class="chapter-start">
                     <div>
-                        <a href="#" class="btn btn-success btn-chapter-nav disabled">Chương Trước</a>
+                        <a href="# --chapId" class="btn btn-success btn-chapter-nav disabled">Chương Trước</a>
                         <select class="btn btn-success btn-chapter-nav form-control" name="chapter">
                             @foreach($totalChapter as   $total)
                                 @if($total->story->id === $chapter->story->id)
@@ -20,7 +20,7 @@
                                 @endif
                             @endforeach
                         </select>
-                        <a href="" class="btn btn-success btn-chapter-nav ">Chương Tiếp</a>
+                        <a href="{{ route('chitiet',$chapter->chap +1)  }}" class="btn btn-success btn-chapter-nav ">Chương Tiếp</a>
                     </div>
 {{--                        {!! $totalChapter->links() !!}--}}
                     <hr class="chapter-start">

@@ -28,7 +28,10 @@ Route::group(['prefix'=>'admin','middleware'=>'admin'],function()
     Route::resource('story','StoryController');
     Route::resource('chapter','ChapterController');
     Route::resource('status','StatusController');
-
+    Route::resource('users','UsersController');
+    Route::get('/about',function (){
+       return view('about');
+    })->name('about');
 });
 Route::get('/','ClientController@index');
 
@@ -38,6 +41,7 @@ Route::get('/chitiet/{id}','ClientController@getChiTiet')->name('chitiet');
 Route::get('/danhmuc/{id}','ClientController@getDanhMuc')->name('danhmuc');
 Route::get('/theodoi/{id}','ClientController@getTheoDoi')->name('theodoi');
 Route::get('/tacgia/{id}','ClientController@getTacGia')->name('tacgia');
+Route::get('/timkiem','ClientController@search')->name('search');
 
 Auth::routes();
 

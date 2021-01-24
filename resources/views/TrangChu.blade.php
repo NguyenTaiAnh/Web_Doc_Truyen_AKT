@@ -32,17 +32,18 @@
                     <p style="font-size: 18px;">Truyện Mới Cập Nhật</p>
                 </div>
                 <!-- ==============================NEW STORIES========================================= -->
-                @foreach($story as $index => $stor)
+                @foreach($chapter as $index => $chap)
 
                 <div class="row" style="margin: auto;">
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
                         <div>
-                            <p class="number" style="border: 1px solid #e74c3c;background:  #e74c3c;">{{$index+1}}</p>
+{{--                            <p class="number" style="border: 1px solid #e74c3c;background:  #e74c3c;">{{$index+1}}</p>--}}
+                            <p class="number" style="{{ $index < 3 ? "border: 1px solid #e74c3c;background:  #e74c3c;" : "border: 1px solid black; color: black"}}">{{$index+1}}</p>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                        <p><a href="/truyen/{{$stor->id}}" class="new_story" style="color: teal; font-weight: 500;">{{$stor->name}}</a></p>
-                        <p><a href="/tacgia/{{$stor->author->id}}" class="new_story">{{$stor->author->name}}</a></p>
+                        <p><a href="/truyen/{{$chap->story->id}}" class="new_story" style="color: teal; font-weight: 500;">{{$chap->story->name}}</a></p>
+                        <p><a href="/tacgia/{{$chap->story->author->id}}" class="new_story">{{$chap->story->author->name}}</a></p>
                     </div>
 
 
@@ -85,7 +86,7 @@
                             </div>
                             <div class="col-md-3 col-lg-3 col-3 col-sm-3" style="margin: auto;">
                                 <div>
-                                    <p class="chapter"><a href="{{route('chitiet',$chap->id)}}" class="new_story">Chương {{$chap->chap}}</a></p>
+                                    <p class="chapter"><a href="{{route('chitiet',getNew($chap['story_id'])['id'])}}" class="new_story">Chương {{ getNew($chap['story_id'])['chap'] }}</a></p>
                                 </div>
                             </div>
                         </div>
