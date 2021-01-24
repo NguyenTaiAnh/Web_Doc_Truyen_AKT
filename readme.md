@@ -95,7 +95,6 @@ TK test:<br>
 
 <p>- Giao diện Admin</p>
 <a href="https://ibb.co/P1HpF6Z"><img src="https://i.ibb.co/TP3XYgB/Capture.png" alt="Capture" border="0"></a>
-![alt text](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/142708273_883817519123395_7343830169040817429_n.png?_nc_cat=100&ccb=2&_nc_sid=ae9488&_nc_ohc=pVMdZVe1LIsAX9RsMhQ&_nc_ht=scontent.fsgn2-6.fna&oh=e9cc3547e12b47946caa8b829abc5aec&oe=6031C661)
 
 <h2>💻 Hướng phát triển cho bài toán</h2>
 
