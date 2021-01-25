@@ -63,7 +63,7 @@
                 </div>
                 <!-- ==============================NEW STORIES========================================= -->
                 <div class="row" style="margin: auto;">
-                    @foreach($chapter as $index => $chap)
+                    @foreach($chapter1 as $index => $chap)
                         @if($index <10)
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
                         <div>

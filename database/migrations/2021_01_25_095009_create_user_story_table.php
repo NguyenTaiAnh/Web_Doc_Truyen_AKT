@@ -18,10 +18,9 @@ class CreateUserStoryTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('story_id');
 
-//            $table->timestamps();
+            $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('story_id')->references('id')->on('story')->onDelete('cascade');
-
         });
     }
 

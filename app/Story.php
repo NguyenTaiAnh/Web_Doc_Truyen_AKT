@@ -13,6 +13,9 @@ class Story extends Model
     {
         return $this->belongsToMany(Category::class,'story_category','story_id', 'category_id');
     }
+    public function user(){
+        return $this->belongsToMany(User::class,'user_story','story_id','user_id');
+    }
     public function Author(){
         return $this->belongsTo(Author::class);
     }

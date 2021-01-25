@@ -4,42 +4,89 @@
         <div class="row">
             <div class="col-md-8 col-lg-8 col-xs-8 col-sm-12 truyen-main">
                 <h2 style="border-bottom:1px solid ;">Truyện Theo Dõi</h2>
-                @dd($userstory)
 {{--                <!-- --------------------------content---------------------------- -->--}}
-{{--                @foreach($story as $stor)--}}
 
-{{--                    <div class="truyen">--}}
-{{--                        <div class="row" style="margin: 0;">--}}
-{{--                            <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">--}}
-{{--                                <img src=" /assets/images/{{$stor->image}}" class="img_cate" alt="">--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-9 col-sm-9 col-9 content">--}}
-{{--                                <p class="name_stories"><a href="{{route('truyen',$stor->id)}}" class="new_story"><i class="fa fa-book"--}}
-{{--                                                                                                                     aria-hidden="true"></i>--}}
-{{--                                        {{$stor->name}}</a></p>--}}
+            @foreach($userstory as $userstor)
+{{--                    @dd($userstor)--}}
 
-{{--                                <p><a href="{{route('tacgia',$stor->author->id)}}" class="new_story"><i class="fa fa-pencil-square-o"--}}
-{{--                                                                                                        aria-hidden="true"></i> {{$stor->author->name}}</a></p>--}}
-{{--                                <div style="word-break: break-all" class="showhide">--}}
-{{--                                    <p class=" content text-less ">{{$stor->description}}</p>--}}
-{{--                                    <p class=" content text-more d-none">{{$stor->description}}</p>--}}
-{{--                                </div>--}}
-{{--                                --}}{{--                                <p>Chương: <a href="detail.html" class="new_story">{{$chap->chap}}: {{$chap->name}}</a></p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <hr>--}}
+                    <div class="truyen">
+                        <div class="row" style="margin: 0;">
+                            <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
+                                <img src=" /assets/images/{{$userstor->story->image}}" class="img_cate" alt="">
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-9 content">
+{{--                                @dd($userstor)--}}
 
-{{--                @endforeach--}}
+                                <p class="name_stories"><a href="{{route('truyen',$userstor->story->id)}}" class="new_story"><i class="fa fa-book"
+                                                                                                                     aria-hidden="true"></i>
+                                        {{$userstor->story->name}}</a></p>
+
+                                <p><a href="{{route('tacgia',$userstor->story->author->id)}}" class="new_story"><i class="fa fa-pencil-square-o"
+                                                                                                        aria-hidden="true"></i> {{$userstor->story->author->name}}</a></p>
+                                <div style="word-break: break-all" class="showhide">
+                                    <p class=" content text-less ">{{$userstor->story->description}}</p>
+                                    <p class=" content text-more d-none">{{$userstor->story->description}}</p>
+                                </div>
+{{--                                                                <p>Chương: <a href="detail.html" class="new_story">{{$chap->chap}}: {{$chap->name}}</a></p>--}}
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                @endforeach
             <!-- -------------------------- end-content---------------------------- -->
+            {!! $userstory->links() !!}
+            </div>
 
+            <div class="col-md-4 col-lg-4 col-xs-4 col-sm-12">
+                <div style="background: #ecf0f1;">
+                    <div class="title" style="background: #03a9f4;">
+                        <p style="font-size: 18px;">Thể loại</p>
+                    </div>
+                    <!-- =====================================BEGIN CATEGORY============================= -->
+                    <div class="row" style="margin: auto;">
+                        @foreach($category as $cate)
+                            <div class="col-md-6 col-lg-6 col-6" style="text-align: center;line-height: 25px;">
+                                <p><a href="{{route('theloai',$cate->id)}}" class="cls_hover">{{$cate->name}}</a></p>
+                            </div>
+                        @endforeach
+                    </div>
+                    <!-- ======================================END CATEGORY================================ -->
+                </div>
+                <div class="title" style="background: #28a745;">
+                    <p style="font-size: 18px;">Truyện Mới Cập Nhật</p>
+                </div>
+                <!-- ==============================NEW STORIES========================================= -->
+                <div class="row" style="margin: auto;">
+                    @foreach($chapter as $index => $chap)
+                        @if($index <10)
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
+                                <div>
+                                    <p class="number" style="{{ $index < 3 ? "border: 1px solid #e74c3c;background:  #e74c3c;" : "border: 1px solid black; color: black"}}">{{$index+1}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
+                                <p><a href="/truyen/{{$chap->story->id}}" class="new_story" style="color: teal; font-weight: 500;">{{$chap->story->name}}</a></p>
+                                <p><a href="/tacgia/{{$chap->story->author->id}}" class="new_story">{{$chap->story->author->name}}</a></p>
+                            </div>
+                            <!-- =================end========================== -->
+                        @endif
+
+                    @endforeach
+
+
+                </div>
+                <!-- ==============================NEW STORIES========================================= -->
+
+            </div>
+
+        </div>
+    </div>
 
                 @endsection
                 @section('custom_js')
                     <script !src="">
                         const thDescription = document.querySelectorAll('.showhide');
-
-
 
                         thDescription.forEach((item, index) => {
                             const textLess = item.querySelector('.text-less');

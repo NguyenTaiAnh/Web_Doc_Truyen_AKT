@@ -9,7 +9,7 @@
 {{--                @dd($tukhoa)--}}
                 @foreach($story as $stor)
                     @foreach($chapter as $chap)
-                        @if($chap->story->category_id == $stor->category_id)
+                        @if($chap->story->id == $stor->id)
                             <div class="truyen">
                                 <div class="row" style="margin: 0;">
                                     <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
@@ -36,12 +36,13 @@
                                 </div>
                             </div>
                             <hr>
-                        @endif
+
+                    @endif
                     @endforeach
                 @endforeach
             <!-- -------------------------- end-content---------------------------- -->
 
-                {!! $story->links() !!}
+                {!! $chapter->links() !!}
 
             </div>
             <!-- -------------------- end---------------- -->
@@ -65,7 +66,7 @@
                 </div>
                 <!-- ==============================NEW STORIES========================================= -->
                 <div class="row" style="margin: auto;">
-                    @foreach($chapter as $index => $chap)
+                    @foreach($chapter1 as $index => $chap)
                         @if($index <10)
                             <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
                                 <div>

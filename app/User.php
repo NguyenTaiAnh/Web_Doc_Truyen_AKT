@@ -36,4 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function story(){
+        return $this->belongsToMany(Story::class,'user_story','story_id','user_id');
+    }
 }

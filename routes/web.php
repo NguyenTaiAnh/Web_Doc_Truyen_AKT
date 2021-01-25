@@ -39,8 +39,8 @@ Route::get('/truyen/{id}','ClientController@getTruyen')->name('truyen');
 Route::get('/theloai/{id}','ClientController@getTheLoai')->name('theloai');
 Route::get('/chitiet/{name}/{chap}','ClientController@getChiTiet')->name('chitiet');
 Route::get('/danhmuc/{id}','ClientController@getDanhMuc')->name('danhmuc');
-Route::get('/theodoi','ClientController@getTheoDoi');
-Route::get('/theodoi','ClientController@getTheoDoi');
+Route::get('/gettheodoi','ClientController@getTheoDoi');
+Route::post('/theodoi','ClientController@postTheoDoi')->name('theodoi');
 Route::get('/tacgia/{id}','ClientController@getTacGia')->name('tacgia');
 Route::get('/timkiem','ClientController@search')->name('search');
 

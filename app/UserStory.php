@@ -13,4 +13,7 @@ class UserStory extends Model
         'user_id',
         'story_id',
     ];
+    public function Story(){
+        return $this->belongsTo(Story::class);
+    }
 }

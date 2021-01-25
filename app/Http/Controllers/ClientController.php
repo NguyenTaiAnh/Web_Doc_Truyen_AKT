@@ -19,27 +19,28 @@ class ClientController extends Controller
     public function search(Request $request)
     {
         $tukhoa = $request->get('tukhoa');
-//        $story = Story::where('name', 'like', "%$tukhoa%")
-//            ->take(30)->paginate(5)->appends(['tukhoa' => $tukhoa]);
         $story = Story::whereHas('author', function($query) use($tukhoa) {
             $query->where('name', 'like', '%'.$tukhoa.'%');
         })->orWhere('name','LIKE','%'.$tukhoa.'%')->take(30)->paginate(5)->appends(['tukhoa' => $tukhoa]);
-
+//        dd($story);
         $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
+//        dd($chapter);
+        $chapter1 = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
         $category = Category::all();
         $status = Status::all();
-        return view('page.timkiem', compact('tukhoa','story','chapter','category','status'));
+        return view('page.timkiem', compact('tukhoa','story','chapter','category','status','chapter1'));
     }
 
     public function index()
     {
         $category = Category::all();
 //        $story = Story::get();
-        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(15);
+        $chapter1 = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
 
         $status = Status::get();
-
-        return view('TrangChu', compact('category', 'chapter', 'status'));
+//        dd($chapter);
+        return view('TrangChu', compact('category', 'chapter', 'status','chapter1'));
     }
 
     public function getTruyen($id)
@@ -51,9 +52,10 @@ class ClientController extends Controller
         $oldStory = Chapter::where('story_id', $id)->select('id')->orderBy('created_at', 'asc')->first();
         $allChapter = Chapter::where('story_id', $id)->get();
 //        dd($allChapter);
-        $totalChapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(5);
+        $totalChapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
+        $check = UserStory::where("user_id",auth()->user()->id)->where('story_id', $id)->first();
 
-        return view('page.truyen', compact('totalChapter','status', 'category', 'chapter', 'count', 'oldStory', 'allChapter'));
+        return view('page.truyen', compact('check','totalChapter','status', 'category', 'chapter', 'count', 'oldStory', 'allChapter'));
     }
 
     public function getTheLoai($id)
@@ -64,7 +66,8 @@ class ClientController extends Controller
         $status = Status::get();
 
         $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
-        return view('page.theloai', compact('category', 'category_id', 'story', 'chapter', 'status'));
+        $chapter1 = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
+        return view('page.theloai', compact('category', 'category_id', 'story', 'chapter', 'status','chapter1'));
     }
 
     public function getTacGia($id)
@@ -73,8 +76,10 @@ class ClientController extends Controller
         $author = Author::where('id', $id)->first();
         $story = Story::where('author_id', $id)->first();
         $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
+        $chapter1 = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
+
         $status = Status::get();
-        return view('page.tacgia', compact('category', 'author', 'story', 'chapter', 'status'));
+        return view('page.tacgia', compact('category', 'author', 'story', 'chapter', 'status','chapter1'));
     }
     public function getDanhMuc($id)
     {
@@ -83,10 +88,10 @@ class ClientController extends Controller
         $detail = Status::where('id', $id)->first();
         $story = Story::where('status_id', $id)->get();
         $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
-//        $chapter = Chapter:: groupBy('story_id')->orderBy('created_at', 'desc')->latest()->paginate(5);
-//        dd($chapter);
+        $chapter1 = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
 
-        return view('page.danhmuc', compact('category', 'status', 'detail', 'story', 'chapter'));
+
+        return view('page.danhmuc', compact('category', 'status', 'detail', 'story', 'chapter','chapter1'));
     }
 
     public function getChiTiet($name,$chap)
@@ -107,18 +112,24 @@ class ClientController extends Controller
     {
         $category= Category::all();
         $status = Status::all();
-        $userstory = UserStory::all();
+        $user_id = auth()->user()->id;
+        $userstory = UserStory::where('user_id',$user_id)->paginate(10);
+        $chapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->get();
 
-        return view('page.theodoi',compact('category','status','userstory'));
+        return view('page.theodoi',compact('category','status','userstory','chapter','status'));
     }
-    public function  postTheoDoi(Request $request){
-        $check = UserStory::where("user_id",Auth::user()->id)->where("story_id",!null)->get();
-        if ($check){
+
+
+    public function  postTheoDoi( Request $request){
+        $check = UserStory::where("user_id",auth()->user()->id)->where('story_id', $request->story_id)->first();
+//        dd($check->story);
+        if (!isset($check)){
             $add = new UserStory();
-            $add->user_id = Auth::user()->id;
-            $add->story_id = "";
+            $add->user_id = auth()->user()->id;
+            $add->story_id = $request['story_id'];
             $add->save();
+//            dd(9);
         }
-//        return redirect()->route('truyen');
+        return redirect()->route('truyen', $request->story_id);
     }
 }
