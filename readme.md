@@ -103,7 +103,8 @@ TK test:<br>
 - Chia sẽ truyện lên các trang mạng xã hội
 - Mục comment cho người đọc truyện
 - Người dùng có thể upload truyện
- 
+- Người dùng có thể đánh giá bố truyện
+- Hiển thị truyện hot nhất theo năm, tháng, tuần
 
 <h2>👦 Tác giả: </h3>
      
