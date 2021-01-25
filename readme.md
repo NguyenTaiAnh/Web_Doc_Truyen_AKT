@@ -1,72 +1,114 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Truyện ATK - WEBSITE ĐỌC TRUYỆN MIỄN PHÍ 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Platform](https://img.shields.io/badge/platform-PHP-blue
+)](https://www.php.net/downloads.php)
+[![Laguage](https://img.shields.io/badge/WEB-HTML-green
+)](https://www.php.net/downloads.php)
+[![Language](https://img.shields.io/badge/Style-CSS-red
+)](https://developer.mozilla.org/vi/docs/Web/CSS)
+[![Language](https://img.shields.io/badge/WEB-javascripts-9cf
+)](https://www.php.net/downloads.php)
+[![DB](https://img.shields.io/badge/DB-MYSQL-information
+)](https://www.mysql.com/)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬
+<h2> ✈ Công dụng, ứng dụng  </h2>
+<h3> Công dụng </h3>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ - Tìm kiếm truyện theo tên theo tên, tác giả
+ - Đăng ký tài khoản để thêm truyên yêu thích 
+  
+ <h3> Ứng dụng </h3>
+ 
+ - Áp dụng cho các nhóm nhỏ, tổ chức trong việc chia sẻ tác phẩm truyện chữ miễn phí.
+ - Những người yêu thích đọc truyện.
+ 
+<h2>☝ Mục đích của bài toán</h2>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3> Đầu vào</h3>
 
-## Learning Laravel
+- Tên truyện, tên tác giả, tên thể loại
+- Email, tài khoản, mật khẩu người dùng 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h3> Đầu ra </h3>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Danh sách truyện
+- Danh sách chương của 1 truyện
+- Danh sách truyện thgeo dõi
 
-## Laravel Sponsors
+<h2>⚙ Các bước cài đặt</h2>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Bước 1: Clone Responsity này về
+- Bước 2: Cài đặt Xampp 7.1.33 https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.1.33/xampp-windows-x64-7.1.33-1-VC14-installer.exe/download
+- Bước 3: Cài Composer https://getcomposer.org/download/
+- Bước 4: Mở thư mục xampp, tìm file xampp-control.exe, run Apache và MySql
+- Bước 5: Vào thư mục vừa clone về, mở cmd tại thư mục vừa clone về lên
+- Bước 6: Gõ lệnh composer install
+- Bước 7: Gõ lệnh composer update
+- Bước 8: Trong thư mục vừa clone về tạo file .env 
+- Bước 9: Mở file .env.example sao chép toàn vộ vào file .env
+- Bước 10: Tạo một database trên MySQL Xampp 
+- Bước 10: Import file demotruyen.sql (trong thư mục vừa clonde về) vào database vừa tạo
+- Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
+- Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
+- Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+[![vAyYAf.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+<b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy</b>
 
-## Contributing
+<ul style="list-style-type:circle">
+    <li>DB_CONNECTION=mysql</li>
+        <li>    DB_HOST=127.0.0.1</li>
+            <li>DB_PORT=3306</li>
+            <li>DB_DATABASE=demotruyen // Tên database</li>
+            <li>DB_USERNAME=root       // nhập tên user nếu có</li> 
+            <li>DB_PASSWORD=          // Nhập mật khẩu nếu có</li>
+                </ul>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<br>
+-------------------- END -------------------------------
+<br>
+TK test:<br>
+- Tk ADMIN: anh@gmail.com / 12345678<br>
+- Tk USER:  anh1@gmail.com / 12345678<br>
+<h2>📑 Nội dung của bài toán </h2>
 
-## Security Vulnerabilities
+- Chức năng đã làm được:
+<p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Trang đọc truyện</p>
+<p>- User</p>
+<ul>
+    <li> Nhập tên truyện </li>
+    <li> Chọn truyện muốn xem </li>
+    <li> Đọc truyện bắt đầu từ chương bạn muốn</li>
+    <li> Đặt truyện vào danh sách yêu thích (không bắt buộc) </li>
+</ul>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+[![vqyDqU.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
-## License
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>- Admin</p>
+<ul>
+    <li> Thống kê truyện, chương, người dùnhg </li>
+    <li> Quản lý người dùng, thể loại, trạng thái, tác giả, truyện, chương </li>
+</ul>
+
+<p>- Giao diện Admin</p>
+<a href="https://ibb.co/P1HpF6Z"><img src="https://i.ibb.co/TP3XYgB/Capture.png" alt="Capture" border="0"></a>
+
+<h2>💻 Hướng phát triển cho bài toán</h2>
+
+- Ưu tiên các truyện có nhiều lượt xem lên top ...
+- Chia sẽ truyện lên các trang mạng xã hội
+- Mục comment cho người đọc truyện
+- Người dùng có thể upload truyện
+ 
+
+<h2>👦 Tác giả: </h3>
+     
+- **Nguyễn Tài Anh**  - Back End Developer (Laravel, Git Manager) -  [link to GitHub!](https://github.com/NguyenTaiAnh)
+- **Trần Minh Tâm**   - Data Analysis (PHP, MySQL, MariaDB) -  [link to GitHub!](https://github.com/zdankz)
+- **Nguyễn Văn Khải** - Front End Developper (HTML, CSS, Javascripts, Bootstrap) - [link to GitHub!](https://github.com/Nguyenkhai99vn)
+   
+   
+   
