@@ -15,7 +15,7 @@
                                     <h5 class="mb-1">Nguyễn Tài Anh</h5>
                                     <small>Leader</small>
                                 </div>
-                                <p class="mb-1">Code Laravel Framwork </p>
+                                <p class="mb-1">Code Laravel Framework </p>
                             </a>
                             <a  class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
