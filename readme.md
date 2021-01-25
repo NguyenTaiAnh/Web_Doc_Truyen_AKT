@@ -51,9 +51,9 @@
 - Bước 10: Trong thư mục vừa clone về tạo file .env 
 - Bước 11: Mở file .env.example sao chép toàn vộ vào file .env
 - Bước 12: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan key:generate
-- Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
-- Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
-- Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
+- Bước 13: Tại cmd tiếp tục chạy lệnh php artisan serve 
+- Bước 14: Vào trình duyệt mở http://127.0.0.1:8000
+- Bước 15: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
 [![vAyYAf.png](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/140859600_250270619998635_6352793602379822998_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=KhVeeZEZ5gsAX_RCUON&_nc_ht=scontent.fsgn2-5.fna&oh=5a1eca3566a9cf3dc80a3226c5fed2c7&oe=60346DA9)](https://imge.to/i/vAyYAf)
 
 <b>Chú ý trong file .env, thay đổi trong file các dòng sau sao cho phù hợp với máy</b>
