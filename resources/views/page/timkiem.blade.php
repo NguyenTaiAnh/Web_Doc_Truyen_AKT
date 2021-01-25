@@ -21,7 +21,7 @@
                                                                                         aria-hidden="true"></i>
                                                 {{$chap->story->name}}</a></p>
 
-                                        <p><a class="new_story"><i class="fa fa-pencil-square-o"
+                                        <p><a href="tacgia/{{$chap->story->author->id}}" class="new_story"><i class="fa fa-pencil-square-o"
                                                                    aria-hidden="true"></i> {{$chap->story->author->name}}
                                             </a></p>
                                         <div style="word-break: break-all" class="showhide">
@@ -29,7 +29,7 @@
                                             <p class=" content text-more d-none">{{$chap->story->description}}</p>
                                         </div>
                                         {{--                                                                    <p class="content">{{$stor->description}}</p>--}}
-                                        <p>Chương: <a href="{{route('chitiet',getNew($chap['story_id'])['id'])}}" class="new_story">{{ getNew($chap['story_id'])['chap'] }}
+                                        <p>Chương: <a href="chitiet/{{getNew($chap['story_id'])['story']['name']}}/{{getNew($chap['story_id'])['chap']}}" class="new_story">{{ getNew($chap['story_id'])['chap'] }}
                                                 : {{ getNew($chap['story_id'])['name'] }}</a></p>
 
                                     </div>

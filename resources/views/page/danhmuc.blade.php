@@ -5,9 +5,9 @@
             <div class="col-md-8 col-lg-8 col-xs-8 col-sm-12 truyen-main">
                 <h2 style="border-bottom:1px solid ;">{{$detail->name}}</h2>
                 <!-- --------------------------content---------------------------- -->
-                @foreach($story as $stor)
+{{--                @foreach($story as $stor)--}}
                     @foreach($chapter as $chap)
-                        @if($chap->story->category_id == $stor->category_id)
+{{--                        @if($chap->story->category_id == $stor->category_id)--}}
                             <div class="truyen">
                                 <div class="row" style="margin: 0;">
                                     <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
@@ -27,31 +27,17 @@
                                             <p class=" content text-more d-none">{{$chap->story->description}}</p>
                                         </div>
                                         {{--                                                                    <p class="content">{{$stor->description}}</p>--}}
-                                        <p>Chương: <a href="detail.html" class="new_story">{{$chap->chap}}
-                                                : {{$chap->name}}</a></p>
+                                        <p>Chương: <a href="chitiet/{{getNew($chap['story_id'])['story']['name']}}/{{getNew($chap['story_id'])['chap']}}" class="new_story">{{ getNew($chap['story_id'])['chap'] }}
+                                                : {{ getNew($chap['story_id'])['name'] }}</a></p>
                                     </div>
                                 </div>
                             </div>
                             <hr>
-                        @endif
-                    @endforeach
+{{--                        @endif--}}
+{{--                    @endforeach--}}
                 @endforeach
 
-                <nav aria-label="...">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+            {!! $chapter->links() !!}
             </div>
             <!-- -------------------- end---------------- -->
             <div class="col-md-4 col-lg-4 col-xs-4 col-sm-12">

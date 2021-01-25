@@ -31,8 +31,12 @@
 
                         </div>
                         <div style=" margin-bottom: 10px;">
-                            <a href="#" class="follow">Theo Dõi</a>
+                            <form action="them" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}" />
 
+                                <input type="hidden" >
+                            <a href="#" class="follow">Theo Dõi</a>
+                            </form>
                             <ul class="btn_gt">
                                 <li class="">
                                     <a class="" href="{{route('truyen',$chapter->story->id)}}#gioithieu">Giới Thiệu</a>
@@ -42,7 +46,7 @@
                                     <a href="{{route('truyen',$chapter->story->id)}}/#danhsach">Danh Sách Chương</a>
                                 </li>
                             </ul>
-                            <a href="/chitiet/{{$chapter->id}}" class="btn_story">Đọc Truyện</a>
+                            <a href="/chitiet/{{$chapter->story->name}}/{{$chapter->chap}}" class="btn_story">Đọc Truyện</a>
                         </div>
                     </div>
                 </div>
@@ -60,11 +64,10 @@
                 <div class="container">
                     <div class="row">
                         @foreach($allChapter as $chap)
-
                         <div class="col-md-6 col-sm-12 col-12">
                             <ul class="detail">
                                 <li>
-                                    <a href="{{route('chitiet',$chap->id)}}">Chương {{$chap->chap}}: {{$chap->name}} </a>
+                                    <a href="chitiet/{{$chap->story->name}}/{{$chap->chap}}">Chương {{$chap->chap}}: {{$chap->name}} </a>
                                 </li>
 
                             </ul>
@@ -96,126 +99,23 @@
             </div>
             <!-- ==============================NEW STORIES========================================= -->
             <div class="row" style="margin: auto;">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="border: 1px solid #e74c3c;background:  #e74c3c;">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
+                @foreach($totalChapter as $index => $chap)
+                    @if($index <10)
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
+                            <div>
+                                <p class="number" style="{{ $index < 3 ? "border: 1px solid #e74c3c;background:  #e74c3c;" : "border: 1px solid black; color: black"}}">{{$index+1}}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
+                            <p><a href="/truyen/{{$chap->story->id}}" class="new_story" style="color: teal; font-weight: 500;">{{$chap->story->name}}</a></p>
+                            <p><a href="/tacgia/{{$chap->story->author->id}}" class="new_story">{{$chap->story->author->name}}</a></p>
+                        </div>
+                        <!-- =================end========================== -->
+                @endif
+
+            @endforeach
                 <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="border: 1px solid #5eb949;background: #5eb949;">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="border: 1px solid #5cabb8;background: #5cabb8;">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
-                <div class="col-lg-2 col-md-2 col-sm-2 col-2" style="margin: auto;">
-                    <div>
-                        <p class="number" style="color: black;border: 1px solid">1</p>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-10" style="padding: 0;">
-                    <p><a href="story.html" class="new_story" style="color: teal; font-weight: 500;">Trọng Sinh Đô
-                            Thị Tu
-                            Tiên</a></p>
-                    <p><a href="category.html" class="new_story">Tên thể loại</a></p>
-                </div>
-                <!-- =================end========================== -->
+
 
 
             </div>

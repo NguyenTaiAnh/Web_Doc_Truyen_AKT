@@ -86,7 +86,10 @@
                             </div>
                             <div class="col-md-3 col-lg-3 col-3 col-sm-3" style="margin: auto;">
                                 <div>
-                                    <p class="chapter"><a href="{{route('chitiet',getNew($chap['story_id'])['id'])}}" class="new_story">Chương {{ getNew($chap['story_id'])['chap'] }}</a></p>
+{{--                                    <p class="chapter"><a href="{{route('chitiet',getNew($chap['story_id'])['id'])}}" class="new_story">Chương {{ getNew($chap['story_id'])['chap'] }}</a></p>--}}
+{{--                                    @dd(getNew($chap['story_id'])['story']['name'])--}}
+                                    <p class="chapter"><a href="chitiet/{{getNew($chap['story_id'])['story']['name']}}/{{getNew($chap['story_id'])['chap']}}" class="new_story">Chương {{ getNew($chap['story_id'])['chap'] }}</a></p>
+
                                 </div>
                             </div>
                         </div>

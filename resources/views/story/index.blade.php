@@ -80,7 +80,7 @@
 
                                 </tbody>
                             </table>
-
+                            {!! $story->links() !!}
                         </div>
 
 

@@ -92,7 +92,7 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Tủ truyện</a>
+                                <a href="theodoi" class="nav-link">Tủ truyện</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

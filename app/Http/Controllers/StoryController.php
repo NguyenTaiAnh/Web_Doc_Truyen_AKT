@@ -17,7 +17,7 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $story = Story::get();
+        $story = Story::paginate(5);
         return view('story.index', compact('story'));
     }
 
