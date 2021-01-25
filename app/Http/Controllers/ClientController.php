@@ -53,7 +53,10 @@ class ClientController extends Controller
         $allChapter = Chapter::where('story_id', $id)->get();
 //        dd($allChapter);
         $totalChapter = Chapter::orderBy('created_at', 'desc')->groupBy('story_id')->latest()->paginate(10);
-        $check = UserStory::where("user_id",auth()->user()->id)->where('story_id', $id)->first();
+        if (Auth::user()){
+            $check = UserStory::where("user_id",auth()->user()->id)->where('story_id', $id)->first();
+        }
+//        $check = UserStory::where("user_id",auth()->user()->id)->where('story_id', $id)->first();
 
         return view('page.truyen', compact('check','totalChapter','status', 'category', 'chapter', 'count', 'oldStory', 'allChapter'));
     }

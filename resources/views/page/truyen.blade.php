@@ -33,15 +33,33 @@
 
                             </div>
                             <div style=" margin-bottom: 10px;">
-                            @if(!$check)
-                                <form action="{{ route('theodoi') }}" method="post">
-                                <input type="hidden" name="story_id" value="{{ $chapter->story->id }}">
-                                    @csrf
-                                    <button class="follow" type="submit"><i class="fa fa-bookmark" aria-hidden="true"></i>
 
-                                        Theo Dõi</button>
-                                </form>
-                            @endif
+
+
+                                @if (Route::has('login'))
+                                    @auth
+                                        @if(!$check)
+                                        <form action="{{ route('theodoi') }}" method="post">
+                                            <input type="hidden" name="story_id" value="{{ $chapter->story->id }}">
+                                            @csrf
+                                            <button class="follow" type="submit"><i class="fa fa-bookmark" aria-hidden="true"></i>
+
+                                                Theo Dõi</button>
+                                        </form>
+                                        @endif
+                                    @endauth
+                                @endif
+
+
+{{--                            @if(!$check)--}}
+{{--                                <form action="{{ route('theodoi') }}" method="post">--}}
+{{--                                <input type="hidden" name="story_id" value="{{ $chapter->story->id }}">--}}
+{{--                                    @csrf--}}
+{{--                                    <button class="follow" type="submit"><i class="fa fa-bookmark" aria-hidden="true"></i>--}}
+
+{{--                                        Theo Dõi</button>--}}
+{{--                                </form>--}}
+{{--                            @endif--}}
                                 <ul class="btn_gt">
                                     <li class="">
                                         <a class="" href="{{ route('truyen', $chapter->story->id) }}#gioithieu">Giới
