@@ -1,4 +1,4 @@
-# Truyện ATK - ỨNG DỤNG WEB ĐỌC TRUYỆN MIỄN PHÍ 
+# Truyện ATK - WEBSITE ĐỌC TRUYỆN MIỄN PHÍ 
 
 [![Platform](https://img.shields.io/badge/platform-PHP-blue
 )](https://www.php.net/downloads.php)
