@@ -43,13 +43,14 @@
 - Bước 2: Cài đặt Xampp 7.1.33 https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.1.33/xampp-windows-x64-7.1.33-1-VC14-installer.exe/download
 - Bước 3: Cài Composer https://getcomposer.org/download/
 - Bước 4: Mở thư mục xampp, tìm file xampp-control.exe, run Apache và MySql
-- Bước 5: Vào thư mục vừa clone về, mở cmd tại thư mục vừa clone về lên
-- Bước 6: Gõ lệnh composer install
-- Bước 7: Gõ lệnh composer update
-- Bước 8: Trong thư mục vừa clone về tạo file .env 
-- Bước 9: Mở file .env.example sao chép toàn vộ vào file .env
-- Bước 10: Tạo một database trên MySQL Xampp 
-- Bước 10: Import file demotruyen.sql (trong thư mục vừa clonde về) vào database vừa tạo
+- Bước 5: Tạo một database trên MySQL Xampp 
+- Bước 6: Import file demotruyen.sql (trong thư mục vừa clonde về) vào database vừa tạo
+- Bước 7: Vào thư mục vừa clone về, mở cmd tại thư mục vừa clone về lên
+- Bước 8: Gõ lệnh composer install
+- Bước 9: Gõ lệnh composer update
+- Bước 10: Trong thư mục vừa clone về tạo file .env 
+- Bước 11: Mở file .env.example sao chép toàn vộ vào file .env
+- Bước 12: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan key:generate
 - Bước 11: Trong thư mục vừa clone về mở cmd và chạy lệnh php artisan serve 
 - Bước 12: Vào trình duyệt mở http://127.0.0.1:8000
 - Bước 13: Nhấn Enter giao diện trang chủ sẽ hiện thỉ ra
