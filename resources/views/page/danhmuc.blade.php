@@ -5,9 +5,9 @@
             <div class="col-md-8 col-lg-8 col-xs-8 col-sm-12 truyen-main">
                 <h2 style="border-bottom:1px solid ;">{{$detail->name}}</h2>
                 <!-- --------------------------content---------------------------- -->
-{{--                @foreach($story as $stor)--}}
+                @foreach($story as $stor)
                     @foreach($chapter as $chap)
-{{--                        @if($chap->story->category_id == $stor->category_id)--}}
+                        @if($chap->story->id == $stor->id)
                             <div class="truyen">
                                 <div class="row" style="margin: 0;">
                                     <div class="col-md-3 col-sm-3 col-3 " style="padding: 0;">
@@ -33,8 +33,8 @@
                                 </div>
                             </div>
                             <hr>
-{{--                        @endif--}}
-{{--                    @endforeach--}}
+                        @endif
+                    @endforeach
                 @endforeach
 
             {!! $chapter->links() !!}
